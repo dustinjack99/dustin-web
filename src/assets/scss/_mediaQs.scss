@@ -1,0 +1,139 @@
+@media (min-width: 1000px) {
+  .about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #bio {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .profLinks {
+      margin-top: 30px;
+    }
+
+    .left-about {
+      justify-content: center;
+      align-items: center;
+      padding-right: 25px;
+    }
+
+    .skills {
+      li {
+        justify-items: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .about-me {
+    .left-about {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profLinks {
+      margin-top: 30px;
+    }
+
+    .skills {
+      align-content: center;
+      justify-content: center;
+
+      li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about-me {
+    .left-about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0.9;
+    padding: 30px;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+    li {
+      background-color: $card-color;
+      border-radius: 5px;
+
+      height: 120px;
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+  }
+
+  .header.show {
+    transform: translateX(-20px);
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+
+  .navHead {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+  }
+}
+
+@media (max-width: 530px) {
+  .about-me {
+    .left-about {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}

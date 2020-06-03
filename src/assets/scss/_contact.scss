@@ -1,0 +1,35 @@
+@import "config";
+
+.contacthead {
+  border-bottom: 8px $card-color solid;
+  text-align: center;
+}
+
+form {
+  background-color: $card-color;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 35px;
+  text-align: center;
+  height: 350px;
+  width: 80%;
+
+  #submit {
+    margin-top: 10px;
+  }
+
+  label {
+    display: block;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  input,
+  textarea {
+    width: 70%;
+  }
+
+  #submit {
+    width: 25%;
+  }
+}

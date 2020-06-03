@@ -1,0 +1,35 @@
+.portfolio {
+  border: #adeafd 8px solid;
+  border-radius: 8px;
+  text-align: center;
+}
+.portfolio a {
+  margin-top: 20px;
+  padding: 10px;
+}
+.portfolio h2 {
+  background-color: #adeafd;
+  padding: 10px 0 20px 0;
+}
+.portfolio h4 {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-bottom: #adeafd 3px solid;
+}
+.portfolio img {
+  margin-bottom: 35px;
+}
+
+.portAnchors {
+  text-decoration: underline;
+  text-decoration-color: #adeafd;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.portImages {
+  border: #5e5c5c 1px solid;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+@import 'config';
+
+.portfolio {
+  border: $card-color 8px solid;
+  border-radius: 8px;
+  text-align: center;
+  a {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  h2 {
+    background-color: $card-color;
+    padding: 10px 0 20px 0;
+  }
+
+  h4 {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-bottom: $card-color 3px solid;
+  }
+
+  img {
+    margin-bottom: 35px;
+  }
+}
+
+.portAnchors {
+  text-decoration: underline;
+  text-decoration-color: $card-color;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.portImages {
+  border: $text-color 1px solid;
+}
+.portImagesWide {
+  border: $text-color 1px solid;
+}

@@ -27,10 +27,19 @@ const Navbar = () => {
             className='fas fa-bars fa-2x'
             onClick={() => {
               let header = document.querySelector('.header');
+              let icon =
+                document.querySelector('.fas.fa-bars.fa-2x') ||
+                document.querySelector('.fas.fa-times.fa-2x');
               if (header.className === 'header') {
+                icon.className = 'fas fa-times fa-2x';
                 header.className = 'header show';
+                header.addEventListener('click', () => {
+                  header.className = 'header';
+                  icon.className = 'fas fa-bars fa-2x';
+                });
               } else if (header.className === 'header show') {
                 header.className = 'header';
+                icon.className = 'fas fa-bars fa-2x';
               }
             }}
           ></i>

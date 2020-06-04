@@ -1,28 +1,57 @@
 @import 'config';
 
 .portfolio {
-  border: $card-color 8px solid;
-  border-radius: 8px;
   text-align: center;
-  a {
-    margin-top: 20px;
-    padding: 10px;
-  }
+  .portContainer {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-  h2 {
-    background-color: $card-color;
-    padding: 10px 0 20px 0;
-  }
+    .TeeTime:hover,
+    .DuckPals:hover,
+    .Scrabble:hover {
+      -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+        both;
+      animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
 
-  h4 {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    border-bottom: $card-color 3px solid;
-  }
+    .TeeTime,
+    .DuckPals,
+    .Scrabble {
+      background-color: $card-color;
+      padding: 10px;
+      margin-bottom: 20px;
 
-  img {
-    margin-bottom: 35px;
+      .TeeTime__contentInner,
+      .DuckPals__contentInner,
+      .Scrabble__contentInner {
+        margin: 20px 0px;
+        background-color: white;
+        visibility: hidden;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    h2 {
+      background-color: $card-color;
+      padding: 10px 0 20px 0;
+    }
+
+    h4 {
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 25px;
+      border-bottom: $card-color 3px solid;
+    }
+
+    img {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -35,7 +64,11 @@
 
 .portImages {
   border: $text-color 1px solid;
+  height: 300px;
+  width: 300px;
 }
 .portImagesWide {
   border: $text-color 1px solid;
+  height: 300px;
+  width: 400px;
 }

@@ -1,2 +1,101 @@
-.ber {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+}
+
+.feed {
+  display: flex;
+  justify-content: center;
+
+  .slide.tracking-out-contract {
+    -webkit-animation: tracking-out-contract 0.7s
+      cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    display: none;
+  }
+
+  .slide.active.tracking-in-expand {
+    border: 1px solid red;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    -webkit-animation: tracking-in-expand 0.7s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  }
+
+  .feedLeft {
+    border: 1px solid blue;
+    text-align: center;
+  }
+
+  .feedRight {
+    text-align: center;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * tracking-out-contract
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+@keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+
+/**
+ * ----------------------------------------
+ *  tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }

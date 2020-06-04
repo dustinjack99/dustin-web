@@ -12,7 +12,6 @@ class Home extends Component {
 
   componentDidMount() {
     axios.get('https://api.github.com/users/dustinjack99/repos').then(res => {
-      console.log(res.data);
       const repos = [];
       for (let i = 0; i < res.data.length; i++) {
         if (res.data[i].name === 'ScrabbleDabble') {
@@ -25,6 +24,7 @@ class Home extends Component {
 
       axios.get('https://api.github.com/repos/E-Bossler/tee-time').then(res => {
         repos.push(res.data);
+        console.log(repos);
         this.setState({ repos });
         console.log(this.state.repos);
       });
@@ -67,47 +67,63 @@ class Home extends Component {
 
   render() {
     const history = this.state.historyState;
-    return (
-      <div className='ber'>
-        <h1>Amber is buttface</h1>
+    const repos = this.state.repos;
+    const slideshows = document.querySelectorAll('.slide');
+    console.log(repos);
+    slideshows.forEach(initSlideShow);
 
-        <div className='liveFeed'>
-          <div className='repoFeed'></div>
-          <div className='commitFeed'>
-            <h2>GitHub Activity</h2>
-            {history.map((hist, i) => {
-              console.log(hist);
-              console.log(
-                hist.commits.map(({ author, message, commitUrl }, i) =>
-                  console.log(commitUrl)
-                )
-              );
-              return (
-                <>
-                  <h3>{hist.repo}</h3>
-                  <div>
-                    <div>
-                      <h4 key={hist.type}>{hist.type}</h4>
-                      <h5 key={hist.repoUrl}>{hist.repoUrl}</h5>
-                    </div>
-                    <div>
-                      <ul>
-                        {hist.commits.map(
-                          ({ author, message, commitUrl }, i) => (
-                            <li>
-                              <p>{author}</p>
-                              <a href={commitUrl}>Commit Url</a>
-                              <p>{message}</p>
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-          </div>
+    function initSlideShow(slideshow) {
+      const slides = document.querySelectorAll('.slide.tracking-out-contract');
+      let index = 0,
+        time = 5000;
+      slides[index].classList.add('active.tracking-in-expand');
+
+      setInterval(() => {
+        slides[index].classList.remove('active');
+        slides[index].classList.add('tracking-out-contract');
+        slides[index].classList.remove('tracking-in-expand');
+
+        index++;
+
+        if (index === slides.length) index = 0;
+
+        slides[index].classList.add('active');
+        slides[index].classList.remove('tracking-out-contract');
+        slides[index].classList.add('tracking-in-expand');
+      }, time);
+    }
+    return (
+      <div className='container'>
+        <div className='projects'>
+          <h2>Current Projects</h2>
+        </div>
+        <div className='feed'>
+          <h2>GitHub Activity</h2>
+          {history.map((hist, i) => {
+            return (
+              <div className='slide tracking-out-contract' key={i}>
+                <div className='feedLeft'>
+                  <h3>{hist.type}</h3>
+                  <p>Event {i + 1}</p>
+                  <h4>
+                    <a href={hist.repoUrl}>{hist.repo}</a>
+                  </h4>
+                </div>
+                <div className='feedRight'>
+                  <h3>Commits</h3>
+                  <ul className='commitList'>
+                    {hist.commits.map(({ message, commitUrl, author }, j) => {
+                      return (
+                        <li key={j}>
+                          <a href={commitUrl}>{message}</a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

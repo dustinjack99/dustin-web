@@ -32,8 +32,8 @@ class Contact extends Component {
     this.changeEmail.bind(this);
   }
 
-  submitForm() {
-    console.log('wow');
+  submitForm(e) {
+    e.preventDefault();
 
     const email = this.state.email;
     const comment = this.state.comment;

@@ -38,7 +38,7 @@ class Home extends Component {
         let commits = [];
         if (payload.commits !== undefined) {
           payload.commits.map(commit => {
-            axios.get(`${commit.url}`).then(res => {
+            return axios.get(`${commit.url}`).then(res => {
               const htmlUrl = res.data.html_url;
               commits.push({
                 author: commit.author.name,

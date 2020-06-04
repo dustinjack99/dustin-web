@@ -42,12 +42,16 @@ const Portfolio = () => {
             <div>
               <h5>Web Client</h5>
             </div>
-            <img className='portImages' src={teetime} />
+            <img alt='teetimegif' className='portImages' src={teetime} />
           </div>
           <div>
             <h5>Android App made with React Native</h5>
             <div>
-              <img className='portImagesWide' src={teetimenat} />
+              <img
+                alt='teetimenatgif'
+                className='portImagesWide'
+                src={teetimenat}
+              />
             </div>
           </div>
         </Collapsible>
@@ -65,7 +69,7 @@ const Portfolio = () => {
               Git Repo
             </a>
           </div>
-          <img className='portImages' src={scrabble} />
+          <img alt='scrabblegif' className='portImages' src={scrabble} />
         </Collapsible>
         <Collapsible
           trigger='DuckPals'
@@ -78,7 +82,7 @@ const Portfolio = () => {
             <a href='https://github.com/austenpturner/DuckPals'>Git Repo</a>
           </div>
 
-          <img className='portImagesWide' src={duckpals} />
+          <img alt='duckpalsgif' className='portImagesWide' src={duckpals} />
         </Collapsible>
       </div>
     </div>

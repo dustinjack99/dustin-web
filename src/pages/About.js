@@ -94,7 +94,7 @@ const About = () => {
               triggerStyle={{ display: 'block' }}
               onOpen={picMajesty}
             >
-              <img id='profile-pic' src={profile} />
+              <img alt='dustinjackson' id='profile-pic' src={profile} />
             </Collapsible>
           </div>
           <div id='bio'>
@@ -106,7 +106,7 @@ const About = () => {
             </p>
             <HashRouter>
               <div className='profLinks'>
-                <a target='_blank' href={resume}>
+                <a target='_blank' rel='noopener noreferrer' href={resume}>
                   Check out my Resume!
                 </a>
                 <br></br>
@@ -128,13 +128,15 @@ const About = () => {
           >
             <ul>
               <li>
-                Javascript <img className='wider' src={jslogo} />
+                Javascript{' '}
+                <img alt='javascript' className='wider' src={jslogo} />
               </li>
               <li>
-                Typescript <img src={ts} />
+                Typescript <img alt='typescript' src={ts} />
               </li>
               <li>
-                Shell scripting <img className='wider' src={cmd} />
+                Shell scripting{' '}
+                <img alt='shellscript' className='wider' src={cmd} />
               </li>
             </ul>
           </Collapsible>
@@ -146,15 +148,15 @@ const About = () => {
           >
             <ul>
               <li>
-                HTML5 <img src={html} />
+                HTML5 <img alt='html' src={html} />
               </li>
               <li>
                 CSS
-                <img src={css} />
+                <img alt='css' src={css} />
               </li>
               <li>
                 SASS
-                <img src={sass} />
+                <img alt='sass' src={sass} />
               </li>
             </ul>
           </Collapsible>
@@ -166,25 +168,26 @@ const About = () => {
           >
             <ul>
               <li>
-                MySQL <img className='wider' src={mysql} />
+                MySQL <img alt='mysql' className='wider' src={mysql} />
               </li>
               <li>
-                Postgres <img className='wider' src={postgres} />
+                Postgres <img alt='postgres' className='wider' src={postgres} />
               </li>
               <li>
-                NoSQL <img src={mongo} />
+                NoSQL <img alt='mongodb' src={mongo} />
               </li>
               <li>
-                Git <img src={git} />
+                Git <img alt='git' src={git} />
               </li>
               <li>
-                Node.js <img className='wider' src={node} />
+                Node.js <img alt='nodejs' className='wider' src={node} />
               </li>
               <li>
-                React / React Native <img className='wider' src={react} />
+                React / React Native{' '}
+                <img alt='react' className='wider' src={react} />
               </li>
               <li>
-                Express <img src={express} />
+                Express <img alt='express' src={express} />
               </li>
             </ul>
           </Collapsible>

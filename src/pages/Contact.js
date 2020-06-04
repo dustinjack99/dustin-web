@@ -1,22 +1,8 @@
 import React, { Component } from 'react';
-import nodemailer from 'nodemailer';
+import axios from 'axios';
 
-async function main(email, comment) {
-  let transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
-  });
-
-  let info = await transporter.sendMail({
-    from: `<${email}>`, // sender address
-    to: 'dustin.guy.jackson@gmail.com', // list of receivers
-    subject: 'Feedback from dustin-jackson.com', // Subject line
-    text: `${comment}`, // plain text body
-    html: `<p>${comment}</p>`, // html body
-  });
-
-  console.log('Message sent: %s', info.messageId);
+function sendNodemailer(email, comment) {
+  axios.post('http://localhost:8080/send', { email, comment });
 }
 class Contact extends Component {
   constructor(props) {
@@ -27,9 +13,9 @@ class Contact extends Component {
       comment: '',
     };
 
-    this.submitForm.bind(this);
-    this.changeComment.bind(this);
-    this.changeEmail.bind(this);
+    this.submitForm = this.submitForm.bind(this);
+    this.changeComment = this.changeComment.bind(this);
+    this.changeEmail = this.changeEmail.bind(this);
   }
 
   submitForm(e) {
@@ -37,7 +23,7 @@ class Contact extends Component {
 
     const email = this.state.email;
     const comment = this.state.comment;
-    main(email, comment);
+    sendNodemailer(email, comment);
   }
 
   changeEmail(e) {

@@ -1,7 +1,6 @@
-@import "config";
+@import 'config';
 
 .contacthead {
-  border-bottom: 8px $card-color solid;
   text-align: center;
 }
 
@@ -15,7 +14,18 @@ form {
   width: 80%;
 
   #submit {
+    background-color: darkgray;
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    width: 50px;
     margin-top: 10px;
+  }
+
+  #submit:hover {
+    background-color: slategrey;
+    color: $card-color;
   }
 
   label {

@@ -26,6 +26,10 @@ class Contact extends Component {
       email: '',
       comment: '',
     };
+
+    this.submitForm.bind(this);
+    this.changeComment.bind(this);
+    this.changeEmail.bind(this);
   }
 
   submitForm() {

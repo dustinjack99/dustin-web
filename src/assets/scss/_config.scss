@@ -1,6 +1,6 @@
-$light-color: #f4f4f4;
-$text-color: #5e5c5c;
-$card-color: #adeafd;
+$light-color: #f1a6a6;
+$text-color: #50e4dc;
+$card-color: #464646;
 $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $b-test: solid red 5px;
 
@@ -47,40 +47,44 @@ $b-test: solid red 5px;
    */
 @-webkit-keyframes shadow-pop-tr {
   0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-box-shadow: 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color, 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color;
+    box-shadow: 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color, 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color;
     -webkit-transform: translateX(0) translateY(0);
     transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
-      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
-      8px -8px #3e3e3e;
-    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
-      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
-      8px -8px #3e3e3e;
+    -webkit-box-shadow: 1px -1px $text-color, 2px -2px $text-color,
+      3px -3px $text-color, 4px -4px $text-color, 5px -5px $text-color,
+      6px -6px $text-color, 7px -7px $text-color, 8px -8px $text-color;
+    box-shadow: 1px -1px $text-color, 2px -2px $text-color, 3px -3px $text-color,
+      4px -4px $text-color, 5px -5px $text-color, 6px -6px $text-color,
+      7px -7px $text-color, 8px -8px $text-color;
     -webkit-transform: translateX(-8px) translateY(8px);
     transform: translateX(-8px) translateY(8px);
   }
 }
 @keyframes shadow-pop-tr {
   0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-box-shadow: 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color, 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color;
+    box-shadow: 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color, 0 0 $text-color, 0 0 $text-color, 0 0 $text-color,
+      0 0 $text-color;
     -webkit-transform: translateX(0) translateY(0);
     transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
-      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
-      8px -8px #3e3e3e;
-    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
-      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
-      8px -8px #3e3e3e;
+    -webkit-box-shadow: 1px -1px $text-color, 2px -2px $text-color,
+      3px -3px $text-color, 4px -4px $text-color, 5px -5px $text-color,
+      6px -6px $text-color, 7px -7px $text-color, 8px -8px $text-color;
+    box-shadow: 1px -1px $text-color, 2px -2px $text-color, 3px -3px $text-color,
+      4px -4px $text-color, 5px -5px $text-color, 6px -6px $text-color,
+      7px -7px $text-color, 8px -8px $text-color;
     -webkit-transform: translateX(-8px) translateY(8px);
     transform: translateX(-8px) translateY(8px);
   }

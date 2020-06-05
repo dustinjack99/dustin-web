@@ -32,10 +32,15 @@ const Portfolio = () => {
           trigger='Tee-Time'
           classParentString='TeeTime'
           onOpen={fadeInTeeTime}
-          triggerStyle={{ fontSize: '20px', display: 'block' }}
+          triggerStyle={{
+            fontSize: '20px',
+            display: 'block',
+            color: '#50e4dc',
+            cursor: 'pointer',
+          }}
         >
           <div className='portAnchors'>
-            <a href='https://dustinjack99.github.io/code-quiz/'>Tee Time!</a>
+            <a href='https://dustinjack99.github.io/code-quiz/'>Live Demo</a>
             <a href='https://github.com/dustinjack99/code-quiz'>Git Repo</a>
           </div>
           <div>
@@ -59,11 +64,16 @@ const Portfolio = () => {
           trigger='Scrabble Dabble'
           classParentString='Scrabble'
           onOpen={fadeInScrabble}
-          triggerStyle={{ fontSize: '20px', display: 'block' }}
+          triggerStyle={{
+            fontSize: '20px',
+            display: 'block',
+            color: '#50e4dc',
+            cursor: 'pointer',
+          }}
         >
           <div className='portAnchors'>
             <a href='https://dustinjack99.github.io/ScrabbleDabble/landing.html'>
-              Scrabble Dabble!
+              Live Demo
             </a>
             <a href='https://github.com/dustinjack99/ScrabbleDabble'>
               Git Repo
@@ -75,10 +85,15 @@ const Portfolio = () => {
           trigger='DuckPals'
           classParentString='DuckPals'
           onOpen={fadeInDuckPals}
-          triggerStyle={{ fontSize: '20px', display: 'block' }}
+          triggerStyle={{
+            fontSize: '20px',
+            display: 'block',
+            color: '#50e4dc',
+            cursor: 'pointer',
+          }}
         >
           <div className='portAnchors'>
-            <a href='https://duckpals.herokuapp.com'>DuckPals!</a>
+            <a href='https://duckpals.herokuapp.com'>Live Demo</a>
             <a href='https://github.com/austenpturner/DuckPals'>Git Repo</a>
           </div>
 

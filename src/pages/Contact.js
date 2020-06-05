@@ -6,7 +6,7 @@ function sendNodemailer(email, comment, emailErr) {
   console.log(email, comment, emailErr);
   axios.post('http://localhost:8080/email', { email }).then(res => {
     if (res.data === 'noEmail') {
-      emailErr.style.display = 'inline-block';
+      emailErr.style.display = 'block';
     } else if (res.data === 'valid') {
       emailErr.style.display = 'none';
       swal({
@@ -56,7 +56,7 @@ class Contact extends Component {
     comField.textContent = '';
 
     if (comment.length < 25) {
-      lengthErr.style.display = 'inline-block';
+      lengthErr.style.display = 'block';
     } else {
       lengthErr.style.display = 'none';
 

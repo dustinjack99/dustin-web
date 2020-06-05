@@ -38,6 +38,8 @@
 .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
 
   .Skills:hover,
@@ -49,10 +51,12 @@
     animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
 
-  .Collapsile__contentInner {
-    z-index: 9;
-    padding: 50px;
-    padding-top: 50px;
+  .Skills__trigger:hover,
+  .Tools__trigger:hover,
+  .WebLang__trigger:hover,
+  .ProgLang__trigger:hover {
+    color: #1cbbb3;
+    background-color: #3b3939;
   }
 
   .Skills,
@@ -60,6 +64,7 @@
   .WebLang,
   .ProgLang {
     background-color: $card-color;
+    border-radius: 3px;
     padding: 10px;
     margin-bottom: 20px;
 
@@ -68,7 +73,8 @@
     .WebLang__contentInner,
     .ProgLang__contentInner {
       margin: 20px 0px;
-      background-color: white;
+      background-color: cornsilk;
+      border-radius: 3px;
       visibility: hidden;
 
       li {

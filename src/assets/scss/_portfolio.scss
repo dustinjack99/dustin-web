@@ -15,10 +15,18 @@
       animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
     }
 
+    .TeeTime__trigger:hover,
+    .DuckPals__trigger:hover,
+    .Scrabble__trigger:hover {
+      color: #1cbbb3;
+      background-color: #3b3939;
+    }
+
     .TeeTime,
     .DuckPals,
     .Scrabble {
       background-color: $card-color;
+      border-radius: 3px;
       padding: 10px;
       margin-bottom: 20px;
 
@@ -26,7 +34,8 @@
       .DuckPals__contentInner,
       .Scrabble__contentInner {
         margin: 20px 0px;
-        background-color: white;
+        background-color: cornsilk;
+        border-radius: 3px;
         visibility: hidden;
       }
     }
@@ -62,7 +71,7 @@
   text-decoration: underline;
   text-decoration-color: $card-color;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .portImages {

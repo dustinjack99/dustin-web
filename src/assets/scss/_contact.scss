@@ -1,5 +1,3 @@
-@import 'config';
-
 .contacthead {
   text-align: center;
 }
@@ -24,22 +22,26 @@ form {
   }
 
   #submit:hover {
-    background-color: slategrey;
+    background-color: $text-color;
     color: $card-color;
   }
 
   label {
+    color: $text-color;
     display: block;
+    margin-bottom: 20px;
     margin-top: 20px;
     padding-top: 20px;
   }
 
   input,
   textarea {
+    border-radius: 5px;
     width: 70%;
   }
 
   #submit {
+    margin-top: 40px;
     width: 25%;
   }
 }

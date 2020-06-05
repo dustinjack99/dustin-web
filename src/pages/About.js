@@ -90,7 +90,7 @@ const About = () => {
           >
             <Collapsible
               trigger='Click here for Beauty'
-              triggerStyle={{ display: 'block' }}
+              triggerStyle={{ display: 'block', cursor: 'pointer' }}
               onOpen={picMajesty}
             >
               <img alt='dustinjackson' id='profile-pic' src={profile} />
@@ -118,7 +118,12 @@ const About = () => {
             <Collapsible
               classParentString='ProgLang'
               onOpen={fadeInProgLang}
-              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              triggerStyle={{
+                fontSize: '20px',
+                display: 'block',
+                color: '#50e4dc',
+                cursor: 'pointer',
+              }}
               trigger='Languages:'
             >
               <ul>
@@ -138,7 +143,12 @@ const About = () => {
             <Collapsible
               classParentString='WebLang'
               onOpen={fadeInWebLang}
-              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              triggerStyle={{
+                fontSize: '20px',
+                display: 'block',
+                color: '#50e4dc',
+                cursor: 'pointer',
+              }}
               trigger='Web:'
             >
               <ul>
@@ -158,7 +168,12 @@ const About = () => {
             <Collapsible
               classParentString='Tools'
               onOpen={fadeInTools}
-              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              triggerStyle={{
+                fontSize: '20px',
+                display: 'block',
+                color: '#50e4dc',
+                cursor: 'pointer',
+              }}
               trigger='Tools:'
             >
               <ul>
@@ -190,7 +205,12 @@ const About = () => {
             <Collapsible
               classParentString='Skills'
               onOpen={fadeInSkills}
-              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              triggerStyle={{
+                fontSize: '20px',
+                display: 'block',
+                color: '#50e4dc',
+                cursor: 'pointer',
+              }}
               trigger='Skills:'
             >
               <ul className='textSkills'>

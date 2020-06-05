@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -11,22 +10,6 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    // axios.get('https://api.github.com/users/dustinjack99/repos').then(res => {
-    //   const repos = [];
-    //   for (let i = 0; i < res.data.length; i++) {
-    //     if (res.data[i].name === 'ScrabbleDabble') {
-    //       repos.push(res.data[i]);
-    //     } else if (res.data[i].name === 'character-sheet') {
-    //       repos.push(res.data[i]);
-    //     }
-    //   }
-
-    //   axios.get('https://api.github.com/repos/E-Bossler/tee-time').then(res => {
-    //     repos.push(res.data);
-    //     this.setState({ repos });
-    //   });
-    // });
-
     axios.get(`https://api.github.com/users/dustinjack99/events`).then(res => {
       const historyState = this.state.historyState;
 
@@ -65,15 +48,10 @@ class Home extends Component {
 
   render() {
     const history = this.state.historyState;
-    // const repos = this.state.repos;
     const slideshows = document.querySelectorAll('.slide');
-
     console.log(slideshows);
-
-    slideshows.forEach(initSlideShow);
-
     function initSlideShow() {
-      const slides = document.querySelectorAll('.slide.tracking-out-contract');
+      const slides = document.querySelector('.slide');
 
       console.log('slides', slides);
 
@@ -97,51 +75,29 @@ class Home extends Component {
     }
 
     return (
-      <div className='container'>
-        {/* <div className='projects'>
-          <h2>Current Projects</h2>
-          {repos.map((repo, i) => {
-            return (
-              <div className='slide tracking-out-contract' key={i}>
-                <h4>{repo.name}</h4>
-                <ul>
-                  <li>Language: {repo.language}</li>
-                  <li>Open Issues: {repo.open_issues}</li>
-                  <p>{repo.description}</p>
-                  <a href={repo.url}>Link</a>
-                </ul>
-              </div>
-            );
-          })}
-        </div> */}
-        <div className='feed'>
-          <h2>GitHub Activity</h2>
-          {history.map((hist, i) => {
-            return (
-              <div className='slide tracking-out-contract' key={i}>
-                <div className='feedLeft'>
-                  <h3>{hist.type}</h3>
-                  <p>Event {i + 1}</p>
-                  <h4>
-                    <a href={hist.repoUrl}>{hist.repo}</a>
-                  </h4>
-                </div>
-                <div className='feedRight'>
-                  <h3>Commits</h3>
-                  <ul className='commitList'>
-                    {hist.commits.map(({ message, commitUrl, author }, j) => {
-                      return (
-                        <li key={j}>
-                          <a href={commitUrl}>{message}</a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+      <div className='feed'>
+        <h2>GitHub Activity</h2>
+        {history.map((hist, i) => (
+          <div className='slide' key={i}>
+            <div className='feedLeft'>
+              <h3>{hist.type}</h3>
+              <p>Event {i + 1}</p>
+              <h4>
+                <a href={hist.repoUrl}>{hist.repo}</a>
+              </h4>
+            </div>
+            <div className='feedRight'>
+              <h3>Commits</h3>
+              <ul className='commitList'>
+                {hist.commits.map(({ message, commitUrl, author }, j) => (
+                  <li key={j}>
+                    <a href={commitUrl}>{message}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }

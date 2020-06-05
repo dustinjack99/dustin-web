@@ -1,17 +1,4 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
 .feed {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   text-align: center;

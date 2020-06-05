@@ -1,4 +1,10 @@
 .about-me {
+  #bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left-about {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,7 +23,12 @@
   }
 
   .profLinks {
+    background-color: $card-color;
+    border-radius: 3px;
+    text-align: center;
     margin-top: -20px;
+    padding: 5px 0;
+    width: 70%;
   }
 
   text-align: center;
@@ -29,6 +40,8 @@
 
 .hover {
   margin-bottom: 15px;
+  -webkit-animation: wobble-hor-bottom 2.5s 3s infinite both;
+  animation: wobble-hor-bottom 2.5s 3s infinite both;
 }
 
 .skillbox {
@@ -55,8 +68,7 @@
   .Tools__trigger:hover,
   .WebLang__trigger:hover,
   .ProgLang__trigger:hover {
-    color: #1cbbb3;
-    background-color: #3b3939;
+    opacity: 0.5;
   }
 
   .Skills,

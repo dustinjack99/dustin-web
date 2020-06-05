@@ -18,8 +18,7 @@
     .TeeTime__trigger:hover,
     .DuckPals__trigger:hover,
     .Scrabble__trigger:hover {
-      color: #1cbbb3;
-      background-color: #3b3939;
+      opacity: 0.5;
     }
 
     .TeeTime,
@@ -59,6 +58,8 @@
 
     .hover {
       margin-bottom: 15px;
+      -webkit-animation: wobble-hor-bottom 2.5s 3s infinite both;
+      animation: wobble-hor-bottom 2.5s 3s infinite both;
     }
 
     img {

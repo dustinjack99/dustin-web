@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
   console.log(email, comment, emailErr);
@@ -9,23 +9,32 @@ function sendNodemailer(email, comment, emailErr) {
       emailErr.style.display = 'block';
     } else if (res.data === 'valid') {
       emailErr.style.display = 'none';
-      swal({
-        title: 'Are you sure?',
-        text: 'Send an email to me?',
-        icon: 'warning',
-        buttons: true,
-        dangerMode: true,
-      }).then(willDelete => {
-        if (willDelete) {
-          swal("Thanks for dropping a line! I'll respond back ASAP", {
-            icon: 'success',
-          });
+      swal
+        .fire({
+          title: 'Are you sure?',
+          text: 'Send an email to me?',
+          icon: 'warning',
+          buttons: true,
+          showCancelButton: true,
+          dangerMode: true,
+        })
+        .then(results => {
+          if (results.value) {
+            swal.fire(
+              'Email sent!',
+              "Thanks for dropping a line, I'll respond back ASAP",
+              'success'
+            );
 
-          axios.post('http://localhost:8080/send', { email, comment });
-        } else {
-          swal("Email not sent! Don't be shy, I'll still be here :)");
-        }
-      });
+            axios.post('http://localhost:8080/send', { email, comment });
+          } else if (results.dismiss === swal.DismissReason.cancel) {
+            swal.fire(
+              'Email not sent!',
+              "Don't be shy, I'll still be here :)",
+              'info'
+            );
+          }
+        });
     }
   });
 }

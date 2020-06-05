@@ -20,11 +20,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #808080;
+  color: $text-color;
 }
 
 a:hover {
-  color: black;
+  opacity: 0.5;
 }
 
 @import 'mediaQs';

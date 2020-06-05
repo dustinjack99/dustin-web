@@ -1,6 +1,5 @@
 import React from 'react';
 import profile from '../assets/images/placeholder.jpg';
-import { HashRouter } from 'react-router-dom';
 
 // Image Imports
 import ts from '../assets/images/tslogo.png';
@@ -104,109 +103,111 @@ const About = () => {
               and libraries. His biggest passions are tinkering, breaking, and
               fixing things.
             </p>
-            <HashRouter>
-              <div className='profLinks'>
-                <a target='_blank' rel='noopener noreferrer' href={resume}>
-                  Check out my Resume!
-                </a>
-                <br></br>
-                <a href='mailto:dustin.guy.jackson@gmail.com'>
-                  Shoot me an Email!
-                </a>
-              </div>
-            </HashRouter>
+            <div className='profLinks'>
+              <a target='_blank' rel='noopener noreferrer' href={resume}>
+                Check out my Resume!
+              </a>
+            </div>
           </div>
         </div>
         <p></p>
 
-        <div className='skills'>
-          <Collapsible
-            classParentString='ProgLang'
-            onOpen={fadeInProgLang}
-            triggerStyle={{ fontSize: '20px', display: 'block' }}
-            trigger='Languages:'
-          >
-            <ul>
-              <li>
-                Javascript{' '}
-                <img alt='javascript' className='wider' src={jslogo} />
-              </li>
-              <li>
-                Typescript <img alt='typescript' src={ts} />
-              </li>
-              <li>
-                Shell scripting{' '}
-                <img alt='shellscript' className='wider' src={cmd} />
-              </li>
-            </ul>
-          </Collapsible>
-          <Collapsible
-            classParentString='WebLang'
-            onOpen={fadeInWebLang}
-            triggerStyle={{ fontSize: '20px', display: 'block' }}
-            trigger='Web:'
-          >
-            <ul>
-              <li>
-                HTML5 <img alt='html' src={html} />
-              </li>
-              <li>
-                CSS
-                <img alt='css' src={css} />
-              </li>
-              <li>
-                SASS
-                <img alt='sass' src={sass} />
-              </li>
-            </ul>
-          </Collapsible>
-          <Collapsible
-            classParentString='Tools'
-            onOpen={fadeInTools}
-            triggerStyle={{ fontSize: '20px', display: 'block' }}
-            trigger='Tools:'
-          >
-            <ul>
-              <li>
-                MySQL <img alt='mysql' className='wider' src={mysql} />
-              </li>
-              <li>
-                Postgres <img alt='postgres' className='wider' src={postgres} />
-              </li>
-              <li>
-                NoSQL <img alt='mongodb' src={mongo} />
-              </li>
-              <li>
-                Git <img alt='git' src={git} />
-              </li>
-              <li>
-                Node.js <img alt='nodejs' className='wider' src={node} />
-              </li>
-              <li>
-                React / React Native{' '}
-                <img alt='react' className='wider' src={react} />
-              </li>
-              <li>
-                Express <img alt='express' src={express} />
-              </li>
-            </ul>
-          </Collapsible>
-          <Collapsible
-            classParentString='Skills'
-            onOpen={fadeInSkills}
-            triggerStyle={{ fontSize: '20px', display: 'block' }}
-            trigger='Skills:'
-          >
-            <ul className='textSkills'>
-              <li className='skill'>Lead large, highly collaborative teams.</li>
-              <li className='skill'>Professionally trained public speaker.</li>
-              <li className='skill'>
-                Working in demanding, fast-paced work environment.
-              </li>
-              <li className='skill'>Agile software development</li>
-              <li className='skill'>Test Driven Development</li>
-            </ul>
-          </Collapsible>
+        <div className='skillbox'>
+          <h5 className='hover'>Hover and Click!</h5>
+          <div className='skills'>
+            <Collapsible
+              classParentString='ProgLang'
+              onOpen={fadeInProgLang}
+              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              trigger='Languages:'
+            >
+              <ul>
+                <li>
+                  Javascript{' '}
+                  <img alt='javascript' className='wider' src={jslogo} />
+                </li>
+                <li>
+                  Typescript <img alt='typescript' src={ts} />
+                </li>
+                <li>
+                  Shell scripting{' '}
+                  <img alt='shellscript' className='wider' src={cmd} />
+                </li>
+              </ul>
+            </Collapsible>
+            <Collapsible
+              classParentString='WebLang'
+              onOpen={fadeInWebLang}
+              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              trigger='Web:'
+            >
+              <ul>
+                <li>
+                  HTML5 <img alt='html' src={html} />
+                </li>
+                <li>
+                  CSS
+                  <img alt='css' src={css} />
+                </li>
+                <li>
+                  SASS
+                  <img alt='sass' src={sass} />
+                </li>
+              </ul>
+            </Collapsible>
+            <Collapsible
+              classParentString='Tools'
+              onOpen={fadeInTools}
+              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              trigger='Tools:'
+            >
+              <ul>
+                <li>
+                  MySQL <img alt='mysql' className='wider' src={mysql} />
+                </li>
+                <li>
+                  Postgres{' '}
+                  <img alt='postgres' className='wider' src={postgres} />
+                </li>
+                <li>
+                  NoSQL <img alt='mongodb' src={mongo} />
+                </li>
+                <li>
+                  Git <img alt='git' src={git} />
+                </li>
+                <li>
+                  Node.js <img alt='nodejs' className='wider' src={node} />
+                </li>
+                <li>
+                  React / React Native{' '}
+                  <img alt='react' className='wider' src={react} />
+                </li>
+                <li>
+                  Express <img alt='express' src={express} />
+                </li>
+              </ul>
+            </Collapsible>
+            <Collapsible
+              classParentString='Skills'
+              onOpen={fadeInSkills}
+              triggerStyle={{ fontSize: '20px', display: 'block' }}
+              trigger='Skills:'
+            >
+              <ul className='textSkills'>
+                <li className='skill'>
+                  Lead large, highly collaborative teams.
+                </li>
+                <li className='skill'>
+                  Professionally trained public speaker.
+                </li>
+                <li className='skill'>
+                  Working in demanding, fast-paced work environment.
+                </li>
+                <li className='skill'>Agile software development</li>
+                <li className='skill'>Test Driven Development</li>
+              </ul>
+            </Collapsible>
+          </div>
         </div>
       </div>
     </>

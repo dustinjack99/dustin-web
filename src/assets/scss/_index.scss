@@ -2,6 +2,11 @@
   .left-about {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    .Collapsible__trigger:hover {
+      -webkit-animation: vibrate-1 0.3s linear infinite both;
+      animation: vibrate-1 0.3s linear infinite both;
+    }
   }
 
   #profile-pic {
@@ -11,6 +16,10 @@
     margin-bottom: 30px;
   }
 
+  .profLinks {
+    margin-top: -20px;
+  }
+
   text-align: center;
 }
 
@@ -18,11 +27,18 @@
   display: none;
 }
 
+.hover {
+  margin-bottom: 15px;
+}
+
+.skillbox {
+  margin-top: 75px;
+}
+
 .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  margin-top: 50px;
 
   .Skills:hover,
   .Tools:hover,

@@ -3,7 +3,6 @@
 .portfolio {
   text-align: center;
   .portContainer {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,6 +46,10 @@
       margin-top: 20px;
       margin-bottom: 25px;
       border-bottom: $card-color 3px solid;
+    }
+
+    .hover {
+      margin-bottom: 15px;
     }
 
     img {

@@ -26,7 +26,7 @@ const Portfolio = () => {
 
   return (
     <div className='portfolio'>
-      <h2>Portfolio</h2>
+      <h5 className='hover'>Hover and Click!</h5>
       <div className='portContainer'>
         <Collapsible
           trigger='Tee-Time'

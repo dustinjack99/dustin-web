@@ -14,21 +14,31 @@ const Footer = () => {
         rel='noopener noreferrer'
         href='https://github.com/dustinjack99'
       >
-        <img alt='gitlogo' id='git' src={gitlogo} />
+        <img className='footImg' alt='gitlogo' id='git' src={gitlogo} />
       </a>
       <a
         target='_blank'
         rel='noopener noreferrer'
         href='https://www.linkedin.com/in/funnydustin/'
       >
-        <img alt='linkedinlogo' id='linkedin' src={linkedIn} />
+        <img
+          className='footImg'
+          alt='linkedinlogo'
+          id='linkedin'
+          src={linkedIn}
+        />
       </a>
       <a
         target='_blank'
         rel='noopener noreferrer'
         href='https://www.facebook.com/dustin.guy.jackson'
       >
-        <img alt='facebooklogo' id='facebook' src={facebook} />
+        <img
+          className='footImg'
+          alt='facebooklogo'
+          id='facebook'
+          src={facebook}
+        />
       </a>
     </nav>
   );

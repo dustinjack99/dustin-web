@@ -43,3 +43,9 @@ form {
     width: 25%;
   }
 }
+
+.lengthErr,
+.emailErr {
+  color: red;
+  display: none;
+}

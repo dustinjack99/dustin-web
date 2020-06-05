@@ -8,8 +8,26 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.post('/send', (req, res) => {
+app.post('/email', (req, res) => {
   console.log(req.body);
+  const { email } = req.body;
+
+  function validEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    console.log(re.test(email));
+
+    if (re.test(email) === false) {
+      res.send('noEmail');
+    } else if (re.test(email) === true) {
+      res.send('valid');
+    }
+  }
+
+  validEmail(email);
+});
+
+app.post('/send', (req, res) => {
   const { email, comment } = req.body;
 
   let transporter = nodemailer.createTransport({
@@ -37,8 +55,6 @@ app.post('/send', (req, res) => {
       console.log('Server is ready to take our messages');
     }
   });
-
-  console.log('Message sent: %s', info.messageId);
 });
 
 app.listen(PORT, function () {

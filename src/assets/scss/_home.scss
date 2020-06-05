@@ -16,42 +16,6 @@
   flex-direction: column;
   text-align: center;
 
-  .slide1.tracking-out-contract {
-    -webkit-animation: tracking-out-contract 0.7s
-      cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-      both;
-    display: none;
-  }
-
-  .slide1.active1.tracking-in-expand {
-    border: 1px solid red;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    -webkit-animation: tracking-in-expand 0.7s
-      cubic-bezier(0.215, 0.61, 0.355, 1) both;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  }
-
-  .slide2.tracking-out-contract {
-    -webkit-animation: tracking-out-contract 0.7s
-      cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-      both;
-    display: none;
-  }
-
-  .slide2.active2.tracking-in-expand {
-    border: 1px solid red;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    -webkit-animation: tracking-in-expand 0.7s
-      cubic-bezier(0.215, 0.61, 0.355, 1) both;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  }
-
   .feedLeft {
     border: 1px solid blue;
     text-align: center;
@@ -120,4 +84,22 @@
   100% {
     opacity: 1;
   }
+}
+
+tracking-out-contract {
+  -webkit-animation: tracking-out-contract1 0.7s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: tracking-out-contract1 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  display: none;
+}
+
+.active.tracking-in-expand {
+  border: 1px solid red;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  -webkit-animation: tracking-in-expand1 0.7s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand1 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }

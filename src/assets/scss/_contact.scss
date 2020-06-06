@@ -1,5 +1,9 @@
 .contacthead {
   text-align: center;
+
+  -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 form {
@@ -7,9 +11,15 @@ form {
   border-radius: 8px;
   margin: auto;
   margin-top: 35px;
+  margin-bottom: 150px;
   text-align: center;
   height: 400px;
   width: 80%;
+
+  -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+    0.3s both;
+  animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
+    both;
 
   #submit {
     background-color: darkgray;
@@ -17,8 +27,13 @@ form {
     color: cornsilk;
     font-size: 20px;
     height: 30px;
-    width: 40%;
+    width: 25%;
     margin-top: 40px;
+
+    -webkit-animation: rotate-in-center 0.6s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+    animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+      both;
   }
 
   #submit:hover {

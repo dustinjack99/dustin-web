@@ -2,6 +2,9 @@
 
 .portfolio {
   text-align: center;
+  -webkit-animation: bounce-in-top 1.1s both;
+  animation: bounce-in-top 1.1s both;
+
   .portContainer {
     display: flex;
     flex-direction: column;

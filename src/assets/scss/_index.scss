@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+      0.5s both;
+    animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
   }
 
   .left-about {
@@ -12,6 +16,12 @@
     .Collapsible__trigger:hover {
       -webkit-animation: vibrate-1 0.3s linear infinite both;
       animation: vibrate-1 0.3s linear infinite both;
+    }
+
+    .picDiv {
+      -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+        both;
+      animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
     }
   }
 
@@ -46,6 +56,10 @@
 
 .skillbox {
   margin-top: 75px;
+
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
 }
 
 .skills {

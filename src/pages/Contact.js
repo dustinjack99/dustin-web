@@ -14,9 +14,7 @@ function sendNodemailer(email, comment, emailErr) {
           title: 'Are you sure?',
           text: 'Send an email to me?',
           icon: 'warning',
-          buttons: true,
           showCancelButton: true,
-          dangerMode: true,
         })
         .then(results => {
           if (results.value) {

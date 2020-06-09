@@ -103,6 +103,11 @@ const About = () => {
               and libraries. His biggest passions are tinkering, breaking, and
               fixing things.
             </p>
+            <br></br>
+            <p>
+              He also loves hiking with his daughter, annoying his cats, and
+              playing way too much Dwarf Fortress.
+            </p>
             <div className='profLinks'>
               <a target='_blank' rel='noopener noreferrer' href={resume}>
                 Check out my Resume!

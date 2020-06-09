@@ -1,3 +1,15 @@
+.brand {
+  background-color: cornsilk;
+  border: 5px solid $card-color;
+  border-radius: 5px;
+  padding: 10px 10px 20px 20px;
+  width: 75%;
+}
+
+.brandTitle {
+  margin-top: 35px;
+}
+
 .feed {
   display: flex;
   flex-direction: column;

@@ -97,6 +97,21 @@ class Home extends Component {
             })}
           </div>
         ))}
+        <h3 className='brandTitle'>My Brand:</h3>
+        <div className='brand'>
+          <p>
+            Full Stack Engineer with a strong background in collaboration and
+            customer service, with heavy insight to approachable UX/UI while
+            offering robust functionality. Earned a certificate in Full Stack
+            Development from University of Washington, with a focus in
+            JavaScript, TypeScript, React, React-Native, along with database
+            tools such as MongoDB, MySQL, and Postgres. Lead highly dynamic
+            teams in agile development environments, meeting every deadline and
+            deliverable laid out. My apps have been given numerous awards, and
+            have serviced markets such as die-hard gamers, avid golfers, and
+            live, online chat platforms.{' '}
+          </p>
+        </div>
       </div>
     );
   }

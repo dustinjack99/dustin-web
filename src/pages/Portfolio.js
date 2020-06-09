@@ -40,8 +40,8 @@ const Portfolio = () => {
           }}
         >
           <div className='portAnchors'>
-            <a href='https://dustinjack99.github.io/code-quiz/'>Live Demo</a>
-            <a href='https://github.com/dustinjack99/code-quiz'>Git Repo</a>
+            <a href='https://tee-time-seattle.herokuapp.com/'>Live Demo</a>
+            <a href='https://github.com/E-Bossler/tee-time'>Git Repo</a>
           </div>
           <div>
             <div>
@@ -51,6 +51,7 @@ const Portfolio = () => {
           </div>
           <div>
             <h5>Android App made with React Native</h5>
+            <p>(Live Demo coming soon!)</p>
             <div>
               <img
                 alt='teetimenatgif'

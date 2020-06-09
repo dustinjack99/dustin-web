@@ -1,8 +1,9 @@
 {
   "name": "dustin-web",
-  "homepage": "https://dustinjack99.github.io/dustin-site",
+  "homepage": "https://www.dustin-jackson.com",
   "version": "0.1.0",
   "private": true,
+  "main": "",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -24,7 +25,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon server",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

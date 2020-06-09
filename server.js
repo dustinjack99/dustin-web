@@ -2,11 +2,16 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-app.use(express.static('public'));
+const path = require('path');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.post('/email', (req, res) => {
   console.log(req.body);

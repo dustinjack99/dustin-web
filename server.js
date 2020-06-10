@@ -41,7 +41,7 @@ app.post('/send', (req, res) => {
     secure: false,
     auth: {
       user: 'dustin.guy.jackson@gmail.com',
-      pass: 'lvyijfdzkpctmenv',
+      pass: 'wkzjxszwetnuhutr',
     },
   });
 

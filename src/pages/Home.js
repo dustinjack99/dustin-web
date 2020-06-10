@@ -48,14 +48,10 @@ class Home extends Component {
       })
       .then(res => {
         const slideshows = document.querySelectorAll('.slide');
-        console.log(slideshows);
 
         slideshows.forEach(initSlideShow);
         function initSlideShow() {
           const slides = document.querySelectorAll('.slide');
-
-          console.log('slides', slides);
-
           let index = 0,
             time = 5000;
           slides[index].classList.add('active');
@@ -75,7 +71,6 @@ class Home extends Component {
 
   render() {
     const history = this.state.historyState;
-    console.log(history);
 
     return (
       <div className='feed'>
@@ -88,7 +83,6 @@ class Home extends Component {
               <a href={hist.repoUrl}>{hist.repo}</a>
             </h4>
             {hist.commits.map((commit, j) => {
-              console.log(commit, j);
               return (
                 <a href={commit.commitUrl} key={commit.commitUrl}>
                   {commit.message}

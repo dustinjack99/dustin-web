@@ -3,7 +3,6 @@ import axios from 'axios';
 import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
-  console.log(email, comment, emailErr);
   axios.post('http://www.dustinjackson.live/email', { email }).then(res => {
     if (res.data === 'noEmail') {
       emailErr.style.display = 'block';
@@ -77,13 +76,11 @@ class Contact extends Component {
   changeEmail(e) {
     const email = e.target.value;
     this.setState({ email });
-    console.log(this.state.email);
   }
 
   changeComment(e) {
     const comment = e.target.value;
     this.setState({ comment });
-    console.log(this.state.comment);
   }
 
   render() {

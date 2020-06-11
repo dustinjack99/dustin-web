@@ -101,9 +101,8 @@ class Home extends Component {
             JavaScript, TypeScript, React, React-Native, along with database
             tools such as MongoDB, MySQL, and Postgres. Lead highly dynamic
             teams in agile development environments, meeting every deadline and
-            deliverable laid out. My apps have been given numerous awards, and
-            have serviced markets such as die-hard gamers, avid golfers, and
-            live, online chat platforms.{' '}
+            deliverable laid out. My apps have serviced markets such as die-hard
+            gamers, avid golfers, and supported dynamic chat platforms.{' '}
           </p>
         </div>
       </div>

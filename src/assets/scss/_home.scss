@@ -16,6 +16,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: cornsilk;
+  border: 5px solid $card-color;
+  height: 200px;
 }
 
 .slide {
@@ -23,15 +26,14 @@
 }
 
 .slide.active {
-  background-color: cornsilk;
-  border: 5px solid $card-color;
   border-radius: 5px;
   display: block;
-  width: 40%;
+  margin-top: 20px;
+  width: 70%;
 
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 /**
@@ -72,4 +74,39 @@ tracking-in-expand {
   -webkit-animation: tracking-in-expand1 0.7s
     cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-expand1 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

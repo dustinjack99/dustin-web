@@ -35,7 +35,7 @@ class Home extends Component {
         function initSlideShow() {
           const slides = document.querySelectorAll('.slide');
           let index = 0,
-            time = 5000;
+            time = 7500;
           slides[index].classList.add('active');
 
           setInterval(() => {
@@ -56,26 +56,29 @@ class Home extends Component {
     console.log(commits);
 
     return (
-      <div className='feed'>
-        <h2>GitHub Activity</h2>
-        {commits.map((commit, i) => (
-          <div className='slide' key={i}>
-            <h3>Commit</h3>
-            <p>{commit.author.name}</p>
-            <h4>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={commit.url
-                  .replace('api.', '')
-                  .replace('repos/', '')
-                  .replace('commits', 'commit')}
-              >
-                {commit.message}
-              </a>
-            </h4>
-          </div>
-        ))}
+      <>
+        <div className='feed'>
+          <h2>GitHub Activity</h2>
+
+          {commits.map((commit, i) => (
+            <div className='slide' key={i}>
+              <h3>Commit</h3>
+              <p>{commit.author.name}</p>
+              <h4>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href={commit.url
+                    .replace('api.', '')
+                    .replace('repos/', '')
+                    .replace('commits', 'commit')}
+                >
+                  {commit.message}
+                </a>
+              </h4>
+            </div>
+          ))}
+        </div>
         <h3 className='brandTitle'>My Brand:</h3>
         <div className='brand'>
           <p>
@@ -90,8 +93,7 @@ class Home extends Component {
             gamers, avid golfers, and supported dynamic chat platforms.{' '}
           </p>
         </div>
-        <p>this is a test</p>
-      </div>
+      </>
     );
   }
 }

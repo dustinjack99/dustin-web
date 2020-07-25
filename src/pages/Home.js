@@ -4,8 +4,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      historyState: [],
-      repos: [],
+      commitArr: [],
     };
   }
 
@@ -13,38 +12,21 @@ class Home extends Component {
     axios
       .get(`https://api.github.com/users/dustinjack99/events`)
       .then(res => {
-        const historyState = this.state.historyState;
+        const commits = [];
 
         for (let i = 0; i < 5; i++) {
-          let type = res.data[i].type;
-          let repo = res.data[i].repo.name;
-          let repoUrl = res.data[i].repo.url;
-          let payload = res.data[i].payload;
-          let commits = [];
-          if (payload.commits !== undefined) {
-            payload.commits.map(commit => {
-              return axios.get(`${commit.url}`).then(res => {
-                const htmlUrl = res.data.html_url;
-                commits.push({
-                  author: commit.author.name,
-                  message: commit.message,
-                  commitUrl: htmlUrl,
-                });
+          if (res.data[i].payload.commits) {
+            for (let j = 0; j < res.data[i].payload.commits.length; j++) {
+              axios.get(res.data[i].payload.commits[j].url).then(result => {
+                console.log(result.data.html_url);
               });
-            });
+              commits.push(res.data[i].payload.commits[j]);
+            }
           }
-
-          let event = {
-            type: type,
-            repo: repo,
-            repoUrl: repoUrl,
-            commits: commits,
-          };
-
-          historyState.push(event);
         }
 
-        this.setState({ historyState });
+        // console.log(commits);
+        this.setState({ commitArr: commits });
       })
       .then(res => {
         const slideshows = document.querySelectorAll('.slide');
@@ -70,25 +52,28 @@ class Home extends Component {
   }
 
   render() {
-    const history = this.state.historyState;
+    const commits = this.state.commitArr;
+    console.log(commits);
 
     return (
       <div className='feed'>
         <h2>GitHub Activity</h2>
-        {history.map((hist, i) => (
+        {commits.map((commit, i) => (
           <div className='slide' key={i}>
-            <h3>{hist.type}</h3>
-            <p>Event {i + 1} at Repo:</p>
+            <h3>Commit</h3>
+            <p>{commit.author.name}</p>
             <h4>
-              <a href={hist.repoUrl}>{hist.repo}</a>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={commit.url
+                  .replace('api.', '')
+                  .replace('repos/', '')
+                  .replace('commits', 'commit')}
+              >
+                {commit.message}
+              </a>
             </h4>
-            {hist.commits.map((commit, j) => {
-              return (
-                <a href={commit.commitUrl} key={commit.commitUrl}>
-                  {commit.message}
-                </a>
-              );
-            })}
           </div>
         ))}
         <h3 className='brandTitle'>My Brand:</h3>
@@ -105,6 +90,7 @@ class Home extends Component {
             gamers, avid golfers, and supported dynamic chat platforms.{' '}
           </p>
         </div>
+        <p>this is a test</p>
       </div>
     );
   }

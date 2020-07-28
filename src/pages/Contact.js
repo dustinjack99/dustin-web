@@ -3,40 +3,42 @@ import axios from 'axios';
 import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
-  axios.post('http://www.dustinjackson.live/email', { email }).then(res => {
-    if (res.data === 'noEmail') {
-      emailErr.style.display = 'block';
-    } else if (res.data === 'valid') {
-      emailErr.style.display = 'none';
-      swal
-        .fire({
-          title: 'Are you sure?',
-          text: 'Send an email to me?',
-          icon: 'warning',
-          showCancelButton: true,
-        })
-        .then(results => {
-          if (results.value) {
-            swal.fire(
-              'Email sent!',
-              "Thanks for dropping a line, I'll respond back ASAP",
-              'success'
-            );
+  axios
+    .post('https://dustin-web.azurewebsites.net/email', { email })
+    .then(res => {
+      if (res.data === 'noEmail') {
+        emailErr.style.display = 'block';
+      } else if (res.data === 'valid') {
+        emailErr.style.display = 'none';
+        swal
+          .fire({
+            title: 'Are you sure?',
+            text: 'Send an email to me?',
+            icon: 'warning',
+            showCancelButton: true,
+          })
+          .then(results => {
+            if (results.value) {
+              swal.fire(
+                'Email sent!',
+                "Thanks for dropping a line, I'll respond back ASAP",
+                'success'
+              );
 
-            axios.post('http://www.dustinjackson.live/send', {
-              email,
-              comment,
-            });
-          } else if (results.dismiss === swal.DismissReason.cancel) {
-            swal.fire(
-              'Email not sent!',
-              "Don't be shy, I'll still be here :)",
-              'info'
-            );
-          }
-        });
-    }
-  });
+              axios.post('https://dustin-web.azurewebsites.net/send', {
+                email,
+                comment,
+              });
+            } else if (results.dismiss === swal.DismissReason.cancel) {
+              swal.fire(
+                'Email not sent!',
+                "Don't be shy, I'll still be here :)",
+                'info'
+              );
+            }
+          });
+      }
+    });
 }
 class Contact extends Component {
   constructor(props) {

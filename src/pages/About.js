@@ -63,7 +63,7 @@ const About = () => {
       document.querySelector('.Collapsible__trigger.is-open');
 
     if (beauty.textContent !== 'so majestic...') {
-      beauty.textContent = 'Click here for Beauty';
+      beauty.textContent = '***click here for Beauty***';
     }
   }
 
@@ -74,7 +74,7 @@ const About = () => {
     if (beauty.textContent !== 'so majestic...') {
       beauty.textContent = 'so majestic...';
     } else {
-      beauty.textContent = 'Click here for Beauty';
+      beauty.textContent = '***click here for Beauty***';
     }
   }
 
@@ -89,8 +89,12 @@ const About = () => {
             onClick={clickClear}
           >
             <Collapsible
-              trigger='Click here for Beauty'
-              triggerStyle={{ display: 'block', cursor: 'pointer' }}
+              trigger='***click here for Beauty***'
+              triggerStyle={{
+                display: 'block',
+                cursor: 'pointer',
+                paddingBottom: '20px',
+              }}
               onOpen={picMajesty}
             >
               <img alt='dustinjackson' id='profile-pic' src={profile} />

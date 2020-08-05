@@ -118,7 +118,7 @@ class Contact extends Component {
           <div className='emailAlt'>
             <p>Or, Email me from your email service:</p>
             <a
-              href="mailto:dustin.guy.jackson@gmail.com?subject=Question From Your Website, dustin-jackson.com!&body=Dear Dustin, you are so handomse. Here's our job offer and why we desperately want you:"
+              href="mailto:dustin.guy.jackson@gmail.com?subject=Job Offer for Dustin Jackson, that Handsome Devil!&body=Dear Dustin, you are so handsome and talented. Here's our job offer and why we desperately want you:"
               target='_blank'
               rel='noopener noreferrer'
             >

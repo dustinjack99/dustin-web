@@ -11,7 +11,7 @@ import './assets/scss/style.css';
 function App() {
   return (
     <React.StrictMode>
-      <Router basename='/'>
+      <Router>
         <Navbar></Navbar>
         <main>
           <Switch>

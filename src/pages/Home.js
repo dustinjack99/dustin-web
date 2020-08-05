@@ -17,9 +17,7 @@ class Home extends Component {
         for (let i = 0; i < 5; i++) {
           if (res.data[i].payload.commits) {
             for (let j = 0; j < res.data[i].payload.commits.length; j++) {
-              axios.get(res.data[i].payload.commits[j].url).then(result => {
-                console.log(result.data.html_url);
-              });
+              axios.get(res.data[i].payload.commits[j].url).then(result => {});
               commits.push(res.data[i].payload.commits[j]);
             }
           }

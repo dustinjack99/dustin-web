@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Image Imports target="_blank"
 import gitlogo from '../assets/images/git-logo.png';
 import linkedIn from '../assets/images/linkedIn_logo.png';
 import facebook from '../assets/images/facebook-logo.png';

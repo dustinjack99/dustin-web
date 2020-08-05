@@ -4,7 +4,6 @@ import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
   axios.post('http://www.dustin-jackson.com/email', { email }).then(res => {
-    console.log(res.data);
     if (res.data === 'noEmail') {
       emailErr.style.display = 'block';
     } else if (res.data === 'valid') {

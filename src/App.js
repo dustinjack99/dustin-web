@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About';
@@ -11,17 +11,25 @@ import './assets/scss/style.css';
 function App() {
   return (
     <React.StrictMode>
-      <Navbar></Navbar>
-      <main>
-        <Router basename='/'>
+      <Router basename='/'>
+        <Navbar></Navbar>
+        <main>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/portfolio' component={Portfolio} />
-            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/about'>
+              <About />
+            </Route>
+            <Route exact path='/portfolio'>
+              <Portfolio />
+            </Route>
+            <Route exact path='/contact'>
+              <Contact />
+            </Route>
           </Switch>
-        </Router>
-      </main>
+        </main>
+      </Router>
       <Footer></Footer>
     </React.StrictMode>
   );

@@ -25,7 +25,6 @@ class Home extends Component {
           }
         }
 
-        // console.log(commits);
         this.setState({ commitArr: commits });
       })
       .then(res => {
@@ -53,7 +52,6 @@ class Home extends Component {
 
   render() {
     const commits = this.state.commitArr;
-    console.log(commits);
 
     return (
       <>

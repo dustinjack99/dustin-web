@@ -26,7 +26,7 @@ const Portfolio = () => {
 
   return (
     <div className='portfolio'>
-      <h5 className='hover'>Hover and Click!</h5>
+      <h5 className='hover'>Click Titles!</h5>
       <div className='portContainer'>
         <Collapsible
           trigger='Tee-Time'
@@ -40,8 +40,20 @@ const Portfolio = () => {
           }}
         >
           <div className='portAnchors'>
-            <a href='https://tee-time-seattle.herokuapp.com/'>Live Demo</a>
-            <a href='https://github.com/E-Bossler/tee-time'>Git Repo</a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='http://www.teetimeproject.com/'
+            >
+              Live Demo
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/E-Bossler/tee-time'
+            >
+              Git Repo
+            </a>
           </div>
           <div>
             <div>
@@ -73,10 +85,18 @@ const Portfolio = () => {
           }}
         >
           <div className='portAnchors'>
-            <a href='https://dustinjack99.github.io/ScrabbleDabble/landing.html'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='http://www.scrabble-dabble.com'
+            >
               Live Demo
             </a>
-            <a href='https://github.com/dustinjack99/ScrabbleDabble'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/dustinjack99/ScrabbleDabble'
+            >
               Git Repo
             </a>
           </div>
@@ -94,8 +114,20 @@ const Portfolio = () => {
           }}
         >
           <div className='portAnchors'>
-            <a href='https://duckpals.herokuapp.com'>Live Demo</a>
-            <a href='https://github.com/austenpturner/DuckPals'>Git Repo</a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://duckpals.herokuapp.com'
+            >
+              Live Demo
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/austenpturner/DuckPals'
+            >
+              Git Repo
+            </a>
           </div>
 
           <img alt='duckpalsgif' className='portImagesWide' src={duckpals} />

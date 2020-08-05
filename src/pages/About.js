@@ -15,7 +15,7 @@ import postgres from '../assets/images/postgres.png';
 import react from '../assets/images/react.png';
 import sass from '../assets/images/sass.png';
 import git from '../assets/images/git.png';
-import resume from '../assets/resumes/DeveloperResume.pdf';
+import resume from '../assets/resumes/Developer Resume (7).pdf';
 import Collapsible from 'react-collapsible';
 
 const About = () => {
@@ -118,7 +118,7 @@ const About = () => {
         <p></p>
 
         <div className='skillbox'>
-          <h5 className='hover'>Hover and Click!</h5>
+          <h5 className='hover'>Click Titles!</h5>
           <div className='skills'>
             <Collapsible
               classParentString='ProgLang'

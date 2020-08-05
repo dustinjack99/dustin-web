@@ -58,7 +58,7 @@ class Home extends Component {
     return (
       <>
         <div className='feed'>
-          <h2>GitHub Activity</h2>
+          <h2 id='feedTitle'>GitHub Activity</h2>
 
           {commits.map((commit, i) => (
             <div className='slide' key={i}>
@@ -79,7 +79,6 @@ class Home extends Component {
             </div>
           ))}
         </div>
-        <h3 className='brandTitle'>My Brand:</h3>
         <div className='brand'>
           <p>
             Full Stack Engineer with a strong background in collaboration and

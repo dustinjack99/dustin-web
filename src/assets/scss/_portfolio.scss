@@ -72,10 +72,17 @@
 }
 
 .portAnchors {
-  text-decoration: underline;
-  text-decoration-color: $card-color;
+  color: slategray;
   display: block;
   margin-bottom: 20px;
+  a {
+    color: slategray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .portImages {

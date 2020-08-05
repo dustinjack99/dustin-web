@@ -3,42 +3,41 @@ import axios from 'axios';
 import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
-  axios
-    .post('https://dustin-web.azurewebsites.net/email', { email })
-    .then(res => {
-      if (res.data === 'noEmail') {
-        emailErr.style.display = 'block';
-      } else if (res.data === 'valid') {
-        emailErr.style.display = 'none';
-        swal
-          .fire({
-            title: 'Are you sure?',
-            text: 'Send an email to me?',
-            icon: 'warning',
-            showCancelButton: true,
-          })
-          .then(results => {
-            if (results.value) {
-              swal.fire(
-                'Email sent!',
-                "Thanks for dropping a line, I'll respond back ASAP",
-                'success'
-              );
+  axios.post('http://www.dustin-jackson.com/email', { email }).then(res => {
+    console.log(res.data);
+    if (res.data === 'noEmail') {
+      emailErr.style.display = 'block';
+    } else if (res.data === 'valid') {
+      emailErr.style.display = 'none';
+      swal
+        .fire({
+          title: 'Are you sure?',
+          text: 'Send an email to me?',
+          icon: 'warning',
+          showCancelButton: true,
+        })
+        .then(results => {
+          if (results.value) {
+            swal.fire(
+              'Email sent!',
+              "Thanks for dropping a line, I'll respond back ASAP",
+              'success'
+            );
 
-              axios.post('https://dustin-web.azurewebsites.net/send', {
-                email,
-                comment,
-              });
-            } else if (results.dismiss === swal.DismissReason.cancel) {
-              swal.fire(
-                'Email not sent!',
-                "Don't be shy, I'll still be here :)",
-                'info'
-              );
-            }
-          });
-      }
-    });
+            axios.post('http://www.dustin-jackson.com/send', {
+              email,
+              comment,
+            });
+          } else if (results.dismiss === swal.DismissReason.cancel) {
+            swal.fire(
+              'Email not sent!',
+              "Don't be shy, I'll still be here :)",
+              'info'
+            );
+          }
+        });
+    }
+  });
 }
 class Contact extends Component {
   constructor(props) {
@@ -91,8 +90,11 @@ class Contact extends Component {
         <h2 className='contacthead m-2'>Contact</h2>
         <form>
           <div>
-            <label htmlFor='email'>E-Mail</label>
+            <label id='topLabel' htmlFor='email'>
+              E-Mail
+            </label>
             <input
+              placeholder='Your Email!'
               onChange={value => this.changeEmail(value)}
               id='email'
               type='email'
@@ -102,6 +104,7 @@ class Contact extends Component {
           <div>
             <label htmlFor='comment'>Comments / Inquiries</label>
             <textarea
+              placeholder='Your Questions / Comments! (Give me a job)'
               onChange={value => this.changeComment(value)}
               rows='5'
               id='comment'

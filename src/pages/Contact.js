@@ -116,6 +116,16 @@ class Contact extends Component {
             </p>
           </div>
           <input id='submit' type='submit' onClick={this.submitForm} />
+          <div className='emailAlt'>
+            <p>Or, Email me from your email service:</p>
+            <a
+              href="mailto:dustin.guy.jackson@gmail.com?subject=Question From Your Website, dustin-jackson.com!&body=Dear Dustin, you are so handomse. Here's our job offer and why we desperately want you:"
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <p>dustin.guy.jackson@gmail.com</p>
+            </a>
+          </div>
         </form>
       </>
     );

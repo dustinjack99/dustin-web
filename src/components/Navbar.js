@@ -1,9 +1,9 @@
 import React from 'react';
-import { HashRouter, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <HashRouter>
+    <Router>
       <nav className='navHead'>
         <div className='name'>
           <Link to='/'>
@@ -45,7 +45,7 @@ const Navbar = () => {
           ></i>
         </div>
       </nav>
-    </HashRouter>
+    </Router>
   );
 };
 

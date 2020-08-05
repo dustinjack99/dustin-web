@@ -54,7 +54,7 @@ class Home extends Component {
     return (
       <>
         <div className='feed'>
-          <h2 id='feedTitle'>GitHub Activity</h2>
+          <h2 id='feedTitle'>GitHub Activity Feed</h2>
 
           {commits.map((commit, i) => (
             <div className='slide' key={i}>

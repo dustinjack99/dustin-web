@@ -35,12 +35,16 @@
   }
 
   .profLinks {
-    background-color: $main-color;
+    background-color: $card-color;
     border-radius: 8px;
     text-align: center;
     margin-top: -20px;
     padding: 5px 0;
     width: 70%;
+
+    a {
+      color: $main-color;
+    }
   }
 
   text-align: center;

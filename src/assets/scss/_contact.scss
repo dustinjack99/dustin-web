@@ -19,12 +19,14 @@
     color: $main-color;
   }
 
-  a:hover {
+  a:hover,
+  .dustEmail:hover {
     text-decoration: underline;
   }
 }
 
 #email {
+  border: 1px solid black;
   height: 35px;
   text-align: center;
 }
@@ -45,7 +47,8 @@ form {
 
   #submit {
     background-color: $main-color;
-    border-radius: 10px;
+    border: none;
+    border-radius: 8px;
     color: $text-color;
     font-size: 20px;
     height: 30px;
@@ -60,7 +63,7 @@ form {
   }
 
   #submit:hover {
-    background-color: $text-color;
+    background-color: white;
     color: $main-color;
   }
 
@@ -68,7 +71,7 @@ form {
     color: $main-color;
     display: block;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 25px;
   }
 
   input,

@@ -53,40 +53,52 @@ class Home extends Component {
 
     return (
       <>
-        <div className='feed'>
-          <h2 id='feedTitle'>GitHub Activity Feed</h2>
+        <div className='homeContainer'>
+          <div className='feed'>
+            <h2 id='feedTitle'>GitHub Activity Feed</h2>
 
-          {commits.map((commit, i) => (
-            <div className='slide' key={i}>
-              <h3>Commit</h3>
-              <p>{commit.author.name}</p>
-              <h4 className='commitUrl'>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href={commit.url
-                    .replace('api.', '')
-                    .replace('repos/', '')
-                    .replace('commits', 'commit')}
-                >
-                  {commit.message}
-                </a>
-              </h4>
-            </div>
-          ))}
-        </div>
-        <div className='brand'>
-          <p>
-            Full Stack Engineer with a strong background in collaboration and
-            customer service, with heavy insight to approachable UX/UI while
-            offering robust functionality. Earned a certificate in Full Stack
-            Development from University of Washington, with a focus in
-            JavaScript, TypeScript, React, React-Native, along with database
-            tools such as MongoDB, MySQL, and Postgres. Lead highly dynamic
-            teams in agile development environments, meeting every deadline and
-            deliverable laid out. My apps have serviced markets such as die-hard
-            gamers, avid golfers, and supported dynamic chat platforms.{' '}
-          </p>
+            {commits.map((commit, i) => (
+              <div className='slide' key={i}>
+                <h3>Commit</h3>
+                <p>{commit.author.name}</p>
+                <h4 className='commitUrl'>
+                  <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href={commit.url
+                      .replace('api.', '')
+                      .replace('repos/', '')
+                      .replace('commits', 'commit')}
+                  >
+                    {commit.message}
+                  </a>
+                </h4>
+              </div>
+            ))}
+          </div>
+          <div className='brand'>
+            <p>
+              I'm a Full Stack Engineer with a strong background in
+              collaboration and customer service, with heavy insight to
+              approachable UX/UI while offering robust functionality.
+            </p>
+            <br />
+            <p>
+              I earned a certificate in Full Stack Development from University
+              of Washington, with a focus in the MERN stack, highly
+              concentrating on JavaScript / TypeScript tools such as MongoDB,
+              MySQL, and React, and React Native. Since graduating, I have
+              worked on projects and gained proficiency in popular toos such as
+              Angular, Azure DevOps, Docker, Postgres, and SASS.
+            </p>
+            <br />
+            <p>
+              I've Lead highly dynamic teams in agile development environments,
+              meeting every deadline and deliverable laid out. My apps have
+              serviced markets such as die-hard gamers, avid golfers, and
+              supported dynamic chat platforms.{' '}
+            </p>
+          </div>
         </div>
       </>
     );

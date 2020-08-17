@@ -1,22 +1,24 @@
 import React from 'react';
 import profile from '../assets/images/placeholder.jpg';
+import Collapsible from 'react-collapsible';
 
-// Image Imports
-import ts from '../assets/images/tslogo.png';
-import jslogo from '../assets/images/jslogo.png';
-import html from '../assets/images/html.png';
-import node from '../assets/images/node.png';
-import mongo from '../assets/images/mongo.png';
-import express from '../assets/images/express.png';
+// Image / Asset Imports
+import angular from '../assets/images/angular.png';
+import azure from '../assets/images/azure.png';
 import cmd from '../assets/images/cmd.png';
 import css from '../assets/images/css.png';
+import docker from '../assets/images/docker.png';
+import git from '../assets/images/git.png';
+import html from '../assets/images/html.png';
+import jslogo from '../assets/images/jslogo.png';
+import ts from '../assets/images/tslogo.png';
+import mongo from '../assets/images/mongo.png';
 import mysql from '../assets/images/mysql.png';
+import node from '../assets/images/node.png';
 import postgres from '../assets/images/postgres.png';
 import react from '../assets/images/react.png';
+import resume from '../assets/resumes/Developer Resume (5).pdf';
 import sass from '../assets/images/sass.png';
-import git from '../assets/images/git.png';
-import resume from '../assets/resumes/Developer Resume (7).pdf';
-import Collapsible from 'react-collapsible';
 
 const About = () => {
   function fadeInProgLang() {
@@ -145,6 +147,12 @@ const About = () => {
                   Typescript <img alt='typescript' src={ts} />
                 </li>
                 <li>
+                  Node.js <img alt='nodejs' className='wider' src={node} />
+                </li>
+                <li>
+                  Git <img alt='git' src={git} />
+                </li>
+                <li>
                   Shell scripting{' '}
                   <img alt='shellscript' className='wider' src={cmd} />
                 </li>
@@ -173,6 +181,14 @@ const About = () => {
                   SASS
                   <img alt='sass' src={sass} />
                 </li>
+                <li>
+                  Docker
+                  <img alt='docker' src={docker} />
+                </li>
+                <li>
+                  Azure
+                  <img alt='azure' src={azure} />
+                </li>
               </ul>
             </Collapsible>
             <Collapsible
@@ -188,6 +204,13 @@ const About = () => {
             >
               <ul>
                 <li>
+                  Angular <img alt='angular' src={angular} />
+                </li>
+                <li>
+                  React / React Native{' '}
+                  <img alt='react' className='wider' src={react} />
+                </li>
+                <li>
                   MySQL <img alt='mysql' className='wider' src={mysql} />
                 </li>
                 <li>
@@ -196,19 +219,6 @@ const About = () => {
                 </li>
                 <li>
                   NoSQL <img alt='mongodb' src={mongo} />
-                </li>
-                <li>
-                  Git <img alt='git' src={git} />
-                </li>
-                <li>
-                  Node.js <img alt='nodejs' className='wider' src={node} />
-                </li>
-                <li>
-                  React / React Native{' '}
-                  <img alt='react' className='wider' src={react} />
-                </li>
-                <li>
-                  Express <img alt='express' src={express} />
                 </li>
               </ul>
             </Collapsible>

@@ -122,7 +122,7 @@ class Contact extends Component {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p>dustin.guy.jackson@gmail.com</p>
+              <p className='dustEmail'>dustin.guy.jackson@gmail.com</p>
             </a>
           </div>
         </form>

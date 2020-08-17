@@ -35,7 +35,7 @@ const Portfolio = () => {
           triggerStyle={{
             fontSize: '20px',
             display: 'block',
-            color: '#50e4dc',
+            color: '#4d89f8',
             cursor: 'pointer',
           }}
         >
@@ -80,7 +80,7 @@ const Portfolio = () => {
           triggerStyle={{
             fontSize: '20px',
             display: 'block',
-            color: '#50e4dc',
+            color: '#4d89f8',
             cursor: 'pointer',
           }}
         >
@@ -109,7 +109,7 @@ const Portfolio = () => {
           triggerStyle={{
             fontSize: '20px',
             display: 'block',
-            color: '#50e4dc',
+            color: '#4d89f8',
             cursor: 'pointer',
           }}
         >

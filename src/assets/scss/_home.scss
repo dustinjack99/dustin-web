@@ -1,26 +1,40 @@
 .brand {
   align-items: center;
-  background-color: cornsilk;
-  border: 5px solid $card-color;
-  border-radius: 5px;
+  background-color: $card-color;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 150px;
   margin-top: 35px;
-  padding: 10px 10px 20px 20px;
+  padding: 20px;
   text-align: center;
   width: 75%;
+
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.commitUrl {
+  a {
+    color: $main-color;
+  }
 }
 
 .feed {
-  align-items: center;
-  background-color: cornsilk;
-  border: 5px solid $card-color;
-  border-radius: 5px;
+  align-content: center;
+  background-color: $card-color;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
+  padding: 15px;
   text-align: center;
+  width: 75%;
+
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 #feedTitle {
@@ -28,12 +42,19 @@
   display: block;
 }
 
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-self: center;
+}
+
 .slide {
   display: none;
 }
 
 .slide.active {
-  border-radius: 5px;
+  border-radius: 8px;
   display: block;
   margin-bottom: 50px;
   margin-top: 20px;

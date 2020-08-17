@@ -1,4 +1,5 @@
 .contacthead {
+  color: $text-color;
   margin-top: -25px;
   text-align: center;
 
@@ -15,22 +16,24 @@
 .emailAlt {
   padding-bottom: 20px;
   p {
-    color: $text-color;
+    color: $main-color;
   }
 
-  a:hover {
+  a:hover,
+  .dustEmail:hover {
     text-decoration: underline;
   }
 }
 
 #email {
+  border: 1px solid black;
   height: 35px;
   text-align: center;
 }
 
 form {
   background-color: $card-color;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: auto;
   margin-top: 35px;
   margin-bottom: 150px;
@@ -43,9 +46,10 @@ form {
     both;
 
   #submit {
-    background-color: darkgray;
-    border-radius: 3px;
-    color: cornsilk;
+    background-color: $main-color;
+    border: none;
+    border-radius: 8px;
+    color: $text-color;
     font-size: 20px;
     height: 30px;
     width: 25%;
@@ -59,20 +63,20 @@ form {
   }
 
   #submit:hover {
-    background-color: $text-color;
-    color: $card-color;
+    background-color: white;
+    color: $main-color;
   }
 
   label {
-    color: $text-color;
+    color: $main-color;
     display: block;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 25px;
   }
 
   input,
   textarea {
-    border-radius: 5px;
+    border-radius: 10px;
     width: 70%;
   }
 }
@@ -84,22 +88,22 @@ form {
 }
 
 .swal2-overlay {
-  background-color: $card-color, 0.45;
+  background-color: $main-color, 0.45;
 }
 
 .swal2-modal {
-  background-color: cornsilk;
-  border-radius: 3px;
-  border: 5px solid $card-color;
+  background-color: $card-color;
+  border-radius: 8px;
+  border: 5px solid $main-color;
 }
 
 .swal2-icon {
-  background-color: cornsilk;
+  background-color: $card-color;
 }
 
 .swal2-backdrop,
 .swal2-backdrop-transition {
-  background-color: cornsilk;
+  background-color: $card-color;
 }
 
 #topLabel {

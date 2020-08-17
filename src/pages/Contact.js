@@ -3,7 +3,7 @@ import axios from 'axios';
 import swal from 'sweetalert2';
 
 function sendNodemailer(email, comment, emailErr) {
-  axios.post('http://www.dustinjackson.live/email', { email }).then(res => {
+  axios.post('http://www.dustin-jackson.com/email', { email }).then(res => {
     if (res.data === 'noEmail') {
       emailErr.style.display = 'block';
     } else if (res.data === 'valid') {
@@ -23,7 +23,7 @@ function sendNodemailer(email, comment, emailErr) {
               'success'
             );
 
-            axios.post('http://www.dustinjackson.live/send', {
+            axios.post('http://www.dustin-jackson.com/send', {
               email,
               comment,
             });
@@ -116,13 +116,13 @@ class Contact extends Component {
           </div>
           <input id='submit' type='submit' onClick={this.submitForm} />
           <div className='emailAlt'>
-            <p>Or, Email me from your email service:</p>
+            <p>Or, click to use your email:</p>
             <a
               href="mailto:dustin.guy.jackson@gmail.com?subject=Job Offer for Dustin Jackson, that Handsome Devil!&body=Dear Dustin, you are so handsome and talented. Here's our job offer and why we desperately want you:"
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p>dustin.guy.jackson@gmail.com</p>
+              <p className='dustEmail'>dustin.guy.jackson@gmail.com</p>
             </a>
           </div>
         </form>

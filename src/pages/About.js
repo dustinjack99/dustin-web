@@ -91,6 +91,7 @@ const About = () => {
             <Collapsible
               trigger='***click here for Beauty***'
               triggerStyle={{
+                color: 'whitesmoke',
                 display: 'block',
                 cursor: 'pointer',
                 paddingBottom: '20px',
@@ -130,7 +131,7 @@ const About = () => {
               triggerStyle={{
                 fontSize: '20px',
                 display: 'block',
-                color: '#50e4dc',
+                color: '#4d89f8',
                 cursor: 'pointer',
               }}
               trigger='Languages:'
@@ -155,7 +156,7 @@ const About = () => {
               triggerStyle={{
                 fontSize: '20px',
                 display: 'block',
-                color: '#50e4dc',
+                color: '#4d89f8',
                 cursor: 'pointer',
               }}
               trigger='Web:'
@@ -180,7 +181,7 @@ const About = () => {
               triggerStyle={{
                 fontSize: '20px',
                 display: 'block',
-                color: '#50e4dc',
+                color: '#4d89f8',
                 cursor: 'pointer',
               }}
               trigger='Tools:'
@@ -217,7 +218,7 @@ const About = () => {
               triggerStyle={{
                 fontSize: '20px',
                 display: 'block',
-                color: '#50e4dc',
+                color: '#4d89f8',
                 cursor: 'pointer',
               }}
               trigger='Skills:'

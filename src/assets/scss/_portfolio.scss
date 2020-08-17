@@ -22,13 +22,14 @@
     .DuckPals__trigger:hover,
     .Scrabble__trigger:hover {
       opacity: 0.5;
+      text-decoration: underline;
     }
 
     .TeeTime,
     .DuckPals,
     .Scrabble {
       background-color: $card-color;
-      border-radius: 3px;
+      border-radius: 8px;
       padding: 10px;
       margin-bottom: 20px;
 
@@ -36,8 +37,8 @@
       .DuckPals__contentInner,
       .Scrabble__contentInner {
         margin: 20px 0px;
-        background-color: cornsilk;
-        border-radius: 3px;
+        background-color: $card-color;
+        border-radius: 8px;
         visibility: hidden;
       }
     }
@@ -72,11 +73,12 @@
 }
 
 .portAnchors {
-  color: slategray;
+  color: $main-color;
   display: block;
   margin-bottom: 20px;
+  margin-top: 15px;
   a {
-    color: slategray;
+    color: $main-color;
     text-decoration: none;
   }
 

@@ -60,7 +60,7 @@ class Home extends Component {
             <div className='slide' key={i}>
               <h3>Commit</h3>
               <p>{commit.author.name}</p>
-              <h4>
+              <h4 className='commitUrl'>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'

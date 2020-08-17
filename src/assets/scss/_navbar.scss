@@ -1,5 +1,5 @@
 nav {
-  background-color: $card-color;
+  background-color: $main-color;
   color: $text-color;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ nav {
 }
 
 .navHead {
-  background-color: $card-color;
+  background-color: $main-color;
   color: $text-color;
   position: fixed;
   height: 85px;

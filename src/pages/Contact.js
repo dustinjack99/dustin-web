@@ -116,7 +116,7 @@ class Contact extends Component {
           </div>
           <input id='submit' type='submit' onClick={this.submitForm} />
           <div className='emailAlt'>
-            <p>Or, Email me from your email service:</p>
+            <p>Or, click to use your email:</p>
             <a
               href="mailto:dustin.guy.jackson@gmail.com?subject=Job Offer for Dustin Jackson, that Handsome Devil!&body=Dear Dustin, you are so handsome and talented. Here's our job offer and why we desperately want you:"
               target='_blank'

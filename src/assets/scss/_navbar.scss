@@ -1,5 +1,5 @@
 nav {
-  background-color: $main-color;
+  background-image: linear-gradient(to bottom, $light-color, $main-color);
   color: $text-color;
   display: flex;
   align-items: center;
@@ -37,6 +37,7 @@ nav {
 }
 
 .footer {
+  background-image: linear-gradient(to top, $light-color, $main-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 80px;

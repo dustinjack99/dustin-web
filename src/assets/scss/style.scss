@@ -13,7 +13,11 @@
 }
 
 body {
-  background-color: $light-color;
+  background-image: radial-gradient(
+    closest-side,
+    $light-color,
+    $main-color 60%
+  );
   font-family: $main-font;
   margin: auto;
 }

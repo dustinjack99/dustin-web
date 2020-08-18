@@ -50,6 +50,13 @@ const Portfolio = () => {
             <a
               target='_blank'
               rel='noopener noreferrer'
+              href='https://exp.host/@dustinjack99/tee-time-nat'
+            >
+              Molbile Demo
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
               href='https://github.com/E-Bossler/tee-time'
             >
               Git Repo
@@ -63,7 +70,6 @@ const Portfolio = () => {
           </div>
           <div>
             <h5>Android App made with React Native</h5>
-            <p>(Live Demo coming soon!)</p>
             <div>
               <img
                 alt='teetimenatgif'

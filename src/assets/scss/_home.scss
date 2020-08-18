@@ -10,10 +10,6 @@
   padding: 20px;
   text-align: center;
   width: 75%;
-
-  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
-  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .commitUrl {
@@ -31,10 +27,6 @@
   padding: 15px;
   text-align: center;
   width: 75%;
-
-  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
-  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 #feedTitle {
@@ -46,7 +38,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-self: center;
+
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .slide {

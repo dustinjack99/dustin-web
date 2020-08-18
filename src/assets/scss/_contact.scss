@@ -9,6 +9,8 @@
 }
 
 #comment {
+  background-color: $light-color;
+  color: $text-color;
   height: 100px;
   text-align: center;
 }
@@ -76,7 +78,11 @@ form {
 
   input,
   textarea {
+    background-color: $light-color;
     border-radius: 10px;
+    color: $text-color;
+    font-size: 20px;
+    outline: none;
     width: 70%;
   }
 }

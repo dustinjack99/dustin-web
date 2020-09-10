@@ -2,14 +2,14 @@ import React from 'react';
 import Collapsible from 'react-collapsible';
 
 // Image Imports
-import teetimenat from '../assets/gifs/tee-time-nat-demo.gif';
-import teetime from '../assets/gifs/tee-time-demo.gif';
-import duckpals from '../assets/gifs/duck-demo.gif';
-import scrabble from '../assets/gifs/scrabble-demo.gif';
+import teetimenat from '../assets/gifs/tee-time-nat-demo-min.gif';
+import teetime from '../assets/gifs/tee-time-demo-min.gif';
+import exOrb from '../assets/gifs/ex-orb-min.gif';
+import scrabble from '../assets/gifs/scrabble-demo-min.gif';
 
 const Portfolio = () => {
-  function fadeInDuckPals() {
-    let li = document.querySelector('.DuckPals__contentInner');
+  function fadeInExOrb() {
+    let li = document.querySelector('.ExOrb__contentInner');
     li.classList.add('text-focus-in');
     li.style.visibility = 'visible';
   }
@@ -28,6 +28,36 @@ const Portfolio = () => {
     <div className='portfolio'>
       <h5 className='hover'>Click Titles!</h5>
       <div className='portContainer'>
+        <Collapsible
+          trigger='ExOrb'
+          classParentString='ExOrb'
+          onOpen={fadeInExOrb}
+          triggerStyle={{
+            fontSize: '20px',
+            display: 'block',
+            color: '#4d89f8',
+            cursor: 'pointer',
+          }}
+        >
+          <div className='portAnchors'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='http://www.ex-orb.com/'
+            >
+              Live Demo
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/dustinjack99/ex-orb'
+            >
+              Git Repo
+            </a>
+          </div>
+
+          <img alt='exorbgif' className='portImagesWide' src={exOrb} />
+        </Collapsible>
         <Collapsible
           trigger='Tee-Time'
           classParentString='TeeTime'
@@ -107,36 +137,6 @@ const Portfolio = () => {
             </a>
           </div>
           <img alt='scrabblegif' className='portImages' src={scrabble} />
-        </Collapsible>
-        <Collapsible
-          trigger='DuckPals'
-          classParentString='DuckPals'
-          onOpen={fadeInDuckPals}
-          triggerStyle={{
-            fontSize: '20px',
-            display: 'block',
-            color: '#4d89f8',
-            cursor: 'pointer',
-          }}
-        >
-          <div className='portAnchors'>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://duckpals.herokuapp.com'
-            >
-              Live Demo
-            </a>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://github.com/austenpturner/DuckPals'
-            >
-              Git Repo
-            </a>
-          </div>
-
-          <img alt='duckpalsgif' className='portImagesWide' src={duckpals} />
         </Collapsible>
       </div>
     </div>

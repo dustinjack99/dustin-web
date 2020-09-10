@@ -11,7 +11,7 @@
     justify-content: space-between;
 
     .TeeTime:hover,
-    .DuckPals:hover,
+    .ExOrb:hover,
     .Scrabble:hover {
       -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
         both;
@@ -19,14 +19,14 @@
     }
 
     .TeeTime__trigger:hover,
-    .DuckPals__trigger:hover,
+    .ExOrb__trigger:hover,
     .Scrabble__trigger:hover {
       opacity: 0.5;
       text-decoration: underline;
     }
 
     .TeeTime,
-    .DuckPals,
+    .ExOrb,
     .Scrabble {
       background-color: $card-color;
       border-radius: 8px;
@@ -34,7 +34,7 @@
       margin-bottom: 20px;
 
       .TeeTime__contentInner,
-      .DuckPals__contentInner,
+      .ExOrb__contentInner,
       .Scrabble__contentInner {
         margin: 20px 0px;
         background-color: $card-color;

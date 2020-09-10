@@ -56,7 +56,8 @@ const Portfolio = () => {
             </a>
           </div>
 
-          <img alt='exorbgif' className='portImagesWide' src={exOrb} />
+          <img alt='exorbgif' className='portImage' src={exOrb} />
+          <p>App that generates an interactive map of NASA's exoplanet API.</p>
         </Collapsible>
         <Collapsible
           trigger='Tee-Time'
@@ -107,6 +108,10 @@ const Portfolio = () => {
                 src={teetimenat}
               />
             </div>
+            <p>
+              Social golf app with live chat and updating scores, both web and
+              mobile.
+            </p>
           </div>
         </Collapsible>
         <Collapsible
@@ -137,6 +142,7 @@ const Portfolio = () => {
             </a>
           </div>
           <img alt='scrabblegif' className='portImages' src={scrabble} />
+          <p>Speed spelling game that tests your skill with words.</p>
         </Collapsible>
       </div>
     </div>

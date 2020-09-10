@@ -10,23 +10,23 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .TeeTime:hover,
     .ExOrb:hover,
+    .TeeTime:hover,
     .Scrabble:hover {
       -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
         both;
       animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
     }
 
-    .TeeTime__trigger:hover,
     .ExOrb__trigger:hover,
+    .TeeTime__trigger:hover,
     .Scrabble__trigger:hover {
       opacity: 0.5;
       text-decoration: underline;
     }
 
-    .TeeTime,
     .ExOrb,
+    .TeeTime,
     .Scrabble {
       background-color: $card-color;
       border-radius: 8px;

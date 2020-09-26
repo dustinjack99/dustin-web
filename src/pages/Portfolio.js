@@ -43,7 +43,7 @@ const Portfolio = () => {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='http://www.ex-orb.com/'
+              href='https://www.ex-orb.com/'
             >
               Live Demo
             </a>
@@ -74,7 +74,7 @@ const Portfolio = () => {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='http://www.teetimeproject.com/'
+              href='https://www.teetimeproject.com/'
             >
               Live Demo
             </a>
@@ -129,7 +129,7 @@ const Portfolio = () => {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='http://www.scrabble-dabble.com'
+              href='https://www.scrabble-dabble.com'
             >
               Live Demo
             </a>

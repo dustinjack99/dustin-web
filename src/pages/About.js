@@ -17,7 +17,7 @@ import mysql from '../assets/images/mysql.png';
 import node from '../assets/images/node.png';
 import postgres from '../assets/images/postgres.png';
 import react from '../assets/images/react.png';
-import resume from '../assets/resumes/Developer Resume (5).pdf';
+import resume from '../assets/resumes/Developer Resume (16).pdf';
 import sass from '../assets/images/sass.png';
 
 const About = () => {

@@ -31,14 +31,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(png|jpe?g|gif|pdf)$/i,
-        loader: "file-loader",
-        options: {
-          emitFile: false,
-          outputPath: (url, resourcePath, context) => {
-            return `${resourcePath}`;
-          },
-          publicPath: "assets",
-        },
+        type: "asset/resource",
       },
     ],
   },

@@ -39,8 +39,7 @@ module.exports = merge(common, {
       },
       {
         test: /\.(png|jpe?g|gif|pdf)$/i,
-        loader: "file-loader",
-        type: "asset/inline",
+        type: "asset/resource",
       },
     ],
   },

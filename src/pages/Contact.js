@@ -3,7 +3,7 @@ import axios from "axios";
 import swal from "sweetalert2";
 
 function sendNodemailer(email, comment, emailErr) {
-  axios.post("http://dustin-jackson.com/email", { email }).then((res) => {
+  axios.post("https://dustin-jackson.com/email", { email }).then((res) => {
     if (res.data === "noEmail") {
       emailErr.style.display = "block";
     } else if (res.data === "valid") {
@@ -23,7 +23,7 @@ function sendNodemailer(email, comment, emailErr) {
               "success"
             );
 
-            axios.post("http://dustin-jackson/send", {
+            axios.post("https://dustin-jackson.com/send", {
               email,
               comment,
             });

@@ -10,6 +10,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = merge(common, {
   mode: "production",
   devtool: false,
+  entry: "./src/index.js",
   output: {
     path: paths.build,
     publicPath: "/",
@@ -27,7 +28,19 @@ module.exports = merge(common, {
     }),
   ],
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|pdf)$/i,
+        loader: "file-loader",
+        options: {
+          emitFile: false,
+          outputPath: (url, resourcePath, context) => {
+            return `${resourcePath}`;
+          },
+          publicPath: "assets",
+        },
+      },
+    ],
   },
   optimization: {
     minimize: true,

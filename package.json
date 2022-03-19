@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --open",
-    "build": "NODE_ENV=production webpack --config config/webpack.prod.js && node server.js",
+    "build": "NODE_ENV=production webpack --config config/webpack.prod.js",
     "build-staging": "NODE_ENV=production webpack --config config/webpack.stag.js",
     "server": "node server.js"
   },

@@ -5,20 +5,20 @@ import Collapsible from "react-collapsible";
 // Image / Asset Imports
 import angular from "../assets/images/angular.png";
 import azure from "../assets/images/azure.png";
-import cmd from "../assets/images/cmd.png";
-import css from "../assets/images/css.png";
 import docker from "../assets/images/docker.png";
-import git from "../assets/images/git.png";
-import html from "../assets/images/html.png";
+import git from "../assets/images/git-real.png";
 import jslogo from "../assets/images/jslogo.png";
+import kotlin from "../assets/images/kotlin.png";
 import ts from "../assets/images/tslogo.png";
+import linux from "../assets/images/linux.png";
 import mongo from "../assets/images/mongo.png";
 import mysql from "../assets/images/mysql.png";
 import node from "../assets/images/node.png";
 import postgres from "../assets/images/postgres.png";
 import react from "../assets/images/react.png";
-import resume from "../assets/resumes/Developer Resume (16).pdf";
+import resume from "../assets/resumes/Developer Resume.pdf";
 import sass from "../assets/images/sass.png";
+import swift from "../assets/images/swift.png";
 
 const About = () => {
   function fadeInProgLang() {
@@ -147,14 +147,13 @@ const About = () => {
                   Typescript <img alt="typescript" src={ts} />
                 </li>
                 <li>
+                  Swift <img alt="swift" src={swift} />
+                </li>
+                <li>
+                  Kotlin <img alt="kotlin" className="wider" src={kotlin} />
+                </li>
+                <li>
                   Node.js <img alt="nodejs" className="wider" src={node} />
-                </li>
-                <li>
-                  Git <img alt="git" src={git} />
-                </li>
-                <li>
-                  Shell scripting{" "}
-                  <img alt="shellscript" className="wider" src={cmd} />
                 </li>
               </ul>
             </Collapsible>
@@ -171,11 +170,11 @@ const About = () => {
             >
               <ul>
                 <li>
-                  HTML5 <img alt="html" src={html} />
+                  React
+                  <img alt="react" className="wider" src={react} />
                 </li>
                 <li>
-                  CSS
-                  <img alt="css" src={css} />
+                  Angular <img alt="angular" src={angular} />
                 </li>
                 <li>
                   SASS
@@ -204,17 +203,17 @@ const About = () => {
             >
               <ul>
                 <li>
-                  Angular <img alt="angular" src={angular} />
+                  Linux
+                  <img alt="shellscript" className="wider" src={linux} />
                 </li>
                 <li>
-                  React / React Native{" "}
-                  <img alt="react" className="wider" src={react} />
+                  Git <img alt="git" src={git} />
                 </li>
                 <li>
                   MySQL <img alt="mysql" className="wider" src={mysql} />
                 </li>
                 <li>
-                  Postgres{" "}
+                  Postgres
                   <img alt="postgres" className="wider" src={postgres} />
                 </li>
                 <li>

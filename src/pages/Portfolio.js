@@ -68,7 +68,7 @@ const Portfolio = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.spell-craft.net"
+              href="https://spell-craft.net"
             >
               Live Demo
             </a>

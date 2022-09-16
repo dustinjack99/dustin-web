@@ -115,11 +115,6 @@ const About = () => {
               He also loves hiking with his daughter, annoying his cats, and
               playing way too much Dwarf Fortress.
             </p>
-            <div className="profLinks">
-              <a target="_blank" rel="noopener noreferrer" href={resume}>
-                Check out my Resume!
-              </a>
-            </div>
           </div>
         </div>
         <p></p>

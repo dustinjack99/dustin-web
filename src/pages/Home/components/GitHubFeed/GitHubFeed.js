@@ -38,9 +38,6 @@ const GitHubFeed = () => {
 
   return (
     <Box className="feed">
-      <Typography typography="15px" id="feedTitle">
-        GitHub Activity Feed
-      </Typography>
       <Suspense fallback={<Loading />}>
         <Commits eventArr={eventArr} />
       </Suspense>

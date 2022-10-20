@@ -25,7 +25,7 @@ export default function VirtualizedList({ technologies }) {
         width: "100%",
         height: 400,
         maxWidth: 360,
-        bgcolor: "background.paper",
+        bgColor: "background.paper",
       }}
     >
       <FixedSizeList

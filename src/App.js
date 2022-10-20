@@ -5,16 +5,18 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Home from "./pages/Home";
-import "./assets/scss/style.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./assets/theme/Theme";
+import ErrorBoundary from "./utils/ErrorBoundary";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <React.StrictMode>
         <Router>
-          <Navbar></Navbar>
+          <ErrorBoundary>
+            <Navbar></Navbar>
+          </ErrorBoundary>
           <main>
             <Switch>
               <Route exact path="/">

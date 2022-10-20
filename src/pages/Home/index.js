@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <div className="homeContainer">
-        <GitHubFeed />
+        {/* <GitHubFeed /> */}
         <div className="brand">
           <p>
             Why, hello! I'm a Software Engineer with deep experience in

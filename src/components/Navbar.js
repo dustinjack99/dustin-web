@@ -1,50 +1,135 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import MenuItem from "@mui/material/MenuItem";
+import Adb from "@mui/icons-material/Adb";
 
 const Navbar = () => {
+  const [anchorElNav, setAnchorElNav] = useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <nav className="navHead">
-      <div className="name">
-        <Link to="/">
-          <h3>Dustin Jackson</h3>
-          <h4>Developer</h4>
-        </Link>
-      </div>
-      <ul className="header">
-        <li className="link">
-          <Link to="/about">About Me</Link>
-        </li>
-        <li className="link">
-          <Link to="/portfolio">Portfolio</Link>
-        </li>
-        {/* <li className='link'>
-          <Link to='/contact'>Contact</Link>
-        </li> */}
-      </ul>
-      <div className="menu-btn">
-        <i
-          className="fas fa-bars fa-2x"
-          onClick={() => {
-            let header = document.querySelector(".header");
-            let icon =
-              document.querySelector(".fas.fa-bars.fa-2x") ||
-              document.querySelector(".fas.fa-times.fa-2x");
-            if (header.className === "header") {
-              icon.className = "fas fa-times fa-2x";
-              header.className = "header show";
-              header.addEventListener("click", () => {
-                header.className = "header";
-                icon.className = "fas fa-bars fa-2x";
-              });
-            } else if (header.className === "header show") {
-              header.className = "header";
-              icon.className = "fas fa-bars fa-2x";
-            }
-          }}
-        ></i>
-      </div>
-    </nav>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Adb sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              color: "text",
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".1rem",
+              textDecoration: "none",
+            }}
+          >
+            Dustin Jackson
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton size="large" onClick={handleOpenNavMenu}>
+              <MenuIcon sx={{ color: "text" }} />
+            </IconButton>
+            <Menu
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              <MenuItem
+                sx={{
+                  bgcolor: "secondary.light",
+                  ":hover": {
+                    bgcolor: "secondary.dark",
+                  },
+                }}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography color="text" textAlign="center">
+                  About
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                sx={{
+                  bgcolor: "secondary.light",
+                  ":hover": {
+                    bgcolor: "secondary.dark",
+                  },
+                }}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography color="text" textAlign="center">
+                  Portfolio
+                </Typography>
+              </MenuItem>
+            </Menu>
+          </Box>
+          <Adb sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              color: "text",
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".1rem",
+              textDecoration: "none",
+            }}
+          >
+            Dustin Jackson
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <IconButton
+              bgcolor="primary"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, display: "block" }}
+            >
+              <Typography color="text">About</Typography>
+            </IconButton>
+            <IconButton
+              bgcolor="primary"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, display: "block" }}
+            >
+              <Typography color="text">Portfolio</Typography>
+            </IconButton>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
-
 export default Navbar;

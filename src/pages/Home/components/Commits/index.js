@@ -1,6 +1,5 @@
 import {
   Avatar,
-  Box,
   Card,
   CardActions,
   CardContent,
@@ -8,17 +7,13 @@ import {
   Container,
   IconButton,
   Link,
-  MobileStepper,
   Typography,
 } from "@mui/material";
-import {
-  ArrowForwardSharp,
-  KeyboardArrowRight,
-  KeyboardArrowLeft,
-} from "@mui/icons-material";
+import { ArrowForwardSharp } from "@mui/icons-material";
 import { autoPlay } from "react-swipeable-views-utils";
 import SwipeableViews from "react-swipeable-views";
 import { useState } from "react";
+import StepWidget from "../StepWidget/StepWidget";
 
 const SlideShow = autoPlay(SwipeableViews);
 
@@ -28,7 +23,17 @@ const Commits = ({ eventArr }) => {
   const reg2 = /(dustinjack99)/g;
 
   return (
-    <>
+    <Container
+      sx={{ backgroundColor: "text", borderRadius: "5px", padding: 2 }}
+    >
+      <Typography color="secondary" textAlign="center" fontSize="1.25rem">
+        GitHub Activity Feed
+      </Typography>
+      <StepWidget
+        activeStep={activeStep}
+        setActiveStep={setActiveStep}
+        eventArr={eventArr}
+      />
       <SlideShow
         axis="x"
         index={activeStep}
@@ -118,36 +123,7 @@ const Commits = ({ eventArr }) => {
           );
         })}
       </SlideShow>
-      <MobileStepper
-        steps={eventArr.length}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <IconButton
-            size="small"
-            onClick={() =>
-              setActiveStep((prevActiveStep) => prevActiveStep + 1)
-            }
-            disabled={activeStep === eventArr.length - 1}
-          >
-            Next
-            <KeyboardArrowRight />
-          </IconButton>
-        }
-        backButton={
-          <IconButton
-            size="small"
-            onClick={() =>
-              setActiveStep((prevActiveStep) => prevActiveStep - 1)
-            }
-            disabled={activeStep === 0}
-          >
-            Back
-            <KeyboardArrowLeft />
-          </IconButton>
-        }
-      />
-    </>
+    </Container>
   );
 };
 

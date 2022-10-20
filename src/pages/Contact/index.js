@@ -1,43 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
-import swal from "sweetalert2";
 
-function sendNodemailer(email, comment, emailErr) {
-  axios.post("https://dustin-jackson.com/email", { email }).then((res) => {
-    if (res.data === "noEmail") {
-      emailErr.style.display = "block";
-    } else if (res.data === "valid") {
-      emailErr.style.display = "none";
-      swal
-        .fire({
-          title: "Are you sure?",
-          text: "Send an email to me?",
-          icon: "warning",
-          showCancelButton: true,
-        })
-        .then((results) => {
-          if (results.value) {
-            swal.fire(
-              "Email sent!",
-              "Thanks for dropping a line, I'll respond back ASAP",
-              "success"
-            );
-
-            axios.post("https://dustin-jackson.com/send", {
-              email,
-              comment,
-            });
-          } else if (results.dismiss === swal.DismissReason.cancel) {
-            swal.fire(
-              "Email not sent!",
-              "Don't be shy, I'll still be here :)",
-              "info"
-            );
-          }
-        });
-    }
-  });
-}
 class Contact extends Component {
   constructor(props) {
     super(props);

@@ -12,10 +12,17 @@
   width: 75%;
 }
 
-.commitUrl {
-  a {
-    color: $main-color;
-  }
+.commitDiv {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  margin-top: 35px;
+  padding: 20px;
+  text-align: center;
+  // width: 75%;
 }
 
 .feed {
@@ -38,98 +45,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
-  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-.slide {
-  display: none;
-}
-
-.slide.active {
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 50px;
-  margin-top: 20px;
-
-  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
-  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-/**
- * ----------------------------------------
- *  tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-tracking-in-expand {
-  align-items: center;
-  border: 1px solid red;
-  justify-items: center;
-  text-align: center;
-  -webkit-animation: tracking-in-expand1 0.7s
-    cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-expand1 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-.text-focus-in {
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-/**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }

@@ -1,0 +1,74 @@
+{
+  "assets": [
+    {
+      "iconUrl": "../assets/images/jslogo.png",
+      "className": "wider",
+      "name": "Javascript"
+    },
+    {
+      "iconUrl": "../assets/images/tslogo.png",
+      "className": null,
+      "name": "TypeScript"
+    },
+    {
+      "iconUrl": "../assets/images/swift.png",
+      "className": null,
+      "name": "Swift"
+    },
+    {
+      "iconUrl": "../assets/images/kotlin.png",
+      "className": "wider",
+      "name": "Kotlin"
+    },
+    {
+      "iconUrl": "../assets/images/node.png",
+      "className": "wider",
+      "name": "NodeJs"
+    },
+    {
+      "iconUrl": "../assets/images/react.png",
+      "className": "wider",
+      "name": "React"
+    },
+    {
+      "iconUrl": "../assets/images/angular.png",
+      "className": null,
+      "name": "Angular"
+    },
+    {
+      "iconUrl": "../assets/images/sass.png",
+      "className": null,
+      "name": "SASS"
+    },
+    {
+      "iconUrl": "../assets/images/docker.png",
+      "className": null,
+      "name": "Docker"
+    },
+    {
+      "iconUrl": "../assets/images/azure.png",
+      "className": null,
+      "name": "Azure"
+    },
+    {
+      "iconUrl": "../assets/images/linux.png",
+      "className": "wider",
+      "name": "Linux"
+    },
+    {
+      "iconUrl": "../assets/images/git-real.png",
+      "className": null,
+      "name": "Git"
+    },
+    {
+      "iconUrl": "../assets/images/postgres.png",
+      "className": "wider",
+      "name": "PostgreSQL"
+    },
+    {
+      "iconUrl": "../assets/images/mongo.png",
+      "className": null,
+      "name": "MongoDB"
+    }
+  ]
+}

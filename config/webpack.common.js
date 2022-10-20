@@ -62,7 +62,7 @@ module.exports = {
           // MiniCssExtractPlugin.loader,
           "style-loader",
           "css-loader",
-          // "sass-loader",
+          "sass-loader",
           // {
           //   loader: "postcss-loader", // postcss loader needed for tailwindcss
           //   options: {

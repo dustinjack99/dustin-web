@@ -20,8 +20,6 @@ module.exports = merge(common, {
     new Dotenv({
       path: "./.env.production",
     }),
-    // Extracts CSS into separate files
-    // Note: style-loader is for development, MiniCssExtractPlugin is for production
     new MiniCssExtractPlugin({
       filename: "styles/[name].[contenthash].css",
       chunkFilename: "[id].css",
@@ -30,19 +28,14 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|pdf)$/i,
+        test: /\.(png|jpe?g|gif|pdf|ico)$/i,
         type: "asset/resource",
       },
     ],
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      `...`,
-      new TerserPlugin(),
-      new CssMinimizerPlugin(),
-    ],
+    minimizer: [`...`, new TerserPlugin(), new CssMinimizerPlugin()],
   },
   performance: {
     hints: false,

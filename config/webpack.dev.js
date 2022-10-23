@@ -5,13 +5,8 @@ const common = require("./webpack.common.js");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = merge(common, {
-  // Set the mode to development or production
   mode: "development",
-
-  // Control how source maps are generated
   devtool: "inline-source-map",
-
-  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
     compress: true,
@@ -22,7 +17,6 @@ module.exports = merge(common, {
       directory: paths.build,
     },
   },
-
   module: {
     rules: [
       {
@@ -38,7 +32,7 @@ module.exports = merge(common, {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|pdf)$/i,
+        test: /\.(png|jpe?g|gif|pdf|ico)$/i,
         type: "asset/resource",
       },
     ],

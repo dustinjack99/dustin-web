@@ -1,74 +1,189 @@
 {
-  "assets": [
+  "fields": [
     {
-      "iconUrl": "../assets/images/jslogo.png",
-      "className": "wider",
-      "name": "Javascript"
+      "name": "Languages",
+      "data": [
+        {
+          "iconUrl": "../assets/images/jslogo.png",
+          "name": "Javascript",
+          "description": "I have programmed in JavaScript for over 8 years freelancing, 3 years working with enterprise level software. I have expert familiarity with the JavaScript ecosystem, ranging from scaling out distributed frontends to full REST Node backends."
+        },
+        {
+          "iconUrl": "../assets/images/tslogo.png",
+          "name": "TypeScript",
+          "description": "I've led and taught company-wide classes in adopting TypeScript into an existing codebase. Where there has been a need for a type system, I have been able to provide a solution."
+        },
+        {
+          "iconUrl": "../assets/images/node.png",
+          "name": "NodeJS",
+          "description": "From building out full REST APIs to building out CLI tools, I have experience with NodeJS in a variety of contexts. I possess a deep familiarity with working on Node servers, and degbugging problems in the event loop."
+        },
+        {
+          "iconUrl": "../assets/images/swift.png",
+          "name": "Swift",
+          "description": "When building out React Native mobile apps, I have used Swift to build out the native solutions that could not be solved through limitations in JavaScript."
+        },
+        {
+          "iconUrl": "../assets/images/kotlin.png",
+          "name": "Kotlin",
+          "description": "Like Swift, I have used Kotlin to build out native solutions for React Native mobile apps. This has grown my understanding not only of Java, but also the Android ecosystem."
+        },
+        {
+          "iconUrl": "../assets/images/rust_logo.png",
+          "name": "Rust",
+          "description": "My newest passion, I've taken my first foray into Rust to contribute to a number of game dev projects. Like any programmer alive, I'm excited to hit the ground running with Rust."
+        }
+      ]
     },
     {
-      "iconUrl": "../assets/images/tslogo.png",
-      "className": null,
-      "name": "TypeScript"
+      "name": "Libraries",
+      "data": [
+        {
+          "iconUrl": "../assets/images/sass.png",
+          "name": "Sass",
+          "description": "I have used Sass on an enterprise level, and a deep understanding of the Sass ecosystem. I have helped dramatically reduce the size of company CSS workloads by implementing modular systems."
+        },
+        {
+          "iconUrl": "../assets/images/sequelize_logo.png",
+          "name": "Sequelize",
+          "description": "My ORM of choice when working with a SQL database. I have used Seqeulize to work with enterprise datasets with entries in the tens of millions."
+        },
+        {
+          "iconUrl": "../assets/images/mongoose_logo.png",
+          "name": "Mongoose",
+          "description": "My personal favorite ORM for working on small projects and prototypes, and when I feel like relating data is going to be a headache."
+        },
+        {
+          "iconUrl": "../assets/images/MUI.png",
+          "name": "Material UI",
+          "description": "MUI has been my favorite component library for a long time. I have used it in all of my enterpise experience and in all of my personal web projects."
+        },
+        {
+          "iconUrl": "../assets/images/webpack.png",
+          "name": "Webpack",
+          "description": "Professionally I have used webpack to build out distributed systems, and personally I have used it to build out my own deployed monorepo projects."
+        },
+        {
+          "iconUrl": "../assets/images/express.png",
+          "name": "Express",
+          "description": "Utilizing Express, I have built out terse, dynamic REST routes and scaled them out to handle millions of requests per day."
+        }
+      ]
     },
     {
-      "iconUrl": "../assets/images/swift.png",
-      "className": null,
-      "name": "Swift"
+      "name": "Tools",
+      "data": [
+        {
+          "iconUrl": "../assets/images/docker.png",
+          "name": "Docker",
+          "description": "Docker has been my tech of choice for my own homelab containerization, as well as my preferred means of deploying services to the cloud."
+        },
+        {
+          "iconUrl": "../assets/images/azure.png",
+          "name": "Azure",
+          "description": "My favorite of the cloud providers, I have used Azure to deploy a number of services, including a full CI/CD pipeline for a most of my web apps."
+        },
+        {
+          "iconUrl": "../assets/images/linux.png",
+          "name": "Linux",
+          "description": "Using Ubuntu 20.04, I maintain a very robut homelab that I use to host a number of services, including my own personal databases that serve data to my apps."
+        },
+        {
+          "iconUrl": "../assets/images/git-real.png",
+          "name": "Git",
+          "description": "Full understanding of collaborative git workflows, including branching, merging, and rebasing. I have used git to manage a number of large projects."
+        },
+        {
+          "iconUrl": "../assets/images/cmd.png",
+          "name": "Command Line",
+          "description": "Familiarity with the command line, including bash scripting, and the ability to use the command line to solve problems."
+        }
+      ]
     },
     {
-      "iconUrl": "../assets/images/kotlin.png",
-      "className": "wider",
-      "name": "Kotlin"
+      "name": "Frameworks",
+      "data": [
+        {
+          "iconUrl": "../assets/images/react.png",
+          "name": "React",
+          "description": "The main frontend framework I use personally and professionally. My deepest expertise, aside from JavaScript, is in React."
+        },
+        {
+          "iconUrl": "../assets/images/react.png",
+          "name": "React-Native",
+          "description": "Utilizing my knowledge of React, I have built out mobile apps for both iOS and Android. I have experience with both Expo and React-Native CLI."
+        },
+        {
+          "iconUrl": "../assets/images/angular.png",
+          "name": "Angular",
+          "description": "Don't get too excited, this is unfortunately experience in AngularJS, not modern Angular. My proudest Angular experience is in migrating it to a React app."
+        },
+        {
+          "iconUrl": "../assets/images/expo.png",
+          "name": "Expo",
+          "description": "My favorite framwork for React Native, Expo is my favroite tool for compiling Android / IOS apps and dpeloying them to the app stores."
+        },
+        {
+          "iconUrl": "../assets/images/macroquad.png",
+          "name": "Macroquad",
+          "description": "Used in tandem with Rust, I am collaborating on 2D games using Macroquad, along with engaging in its vibrant community."
+        }
+      ]
     },
     {
-      "iconUrl": "../assets/images/node.png",
-      "className": "wider",
-      "name": "NodeJs"
+      "name": "Databases",
+      "data": [
+        {
+          "iconUrl": "../assets/images/postgres.png",
+          "name": "PostgreSQL",
+          "description": "The best SQL language, let's be honest. The database I have used most professionally, I have used it to build out large, distributed systems."
+        },
+        {
+          "iconUrl": "../assets/images/mysql.png",
+          "name": "MySQL",
+          "description": "The SQL dialect I learned in school, used to build out several school projects and a few personal projects."
+        },
+        {
+          "iconUrl": "../assets/images/mongo.png",
+          "name": "MongoDB",
+          "description": "My personal favorite database for small projects and prototypes. The one I use the least, but my favorite for its speed and ease of use."
+        }
+      ]
     },
     {
-      "iconUrl": "../assets/images/react.png",
-      "className": "wider",
-      "name": "React"
-    },
-    {
-      "iconUrl": "../assets/images/angular.png",
-      "className": null,
-      "name": "Angular"
-    },
-    {
-      "iconUrl": "../assets/images/sass.png",
-      "className": null,
-      "name": "SASS"
-    },
-    {
-      "iconUrl": "../assets/images/docker.png",
-      "className": null,
-      "name": "Docker"
-    },
-    {
-      "iconUrl": "../assets/images/azure.png",
-      "className": null,
-      "name": "Azure"
-    },
-    {
-      "iconUrl": "../assets/images/linux.png",
-      "className": "wider",
-      "name": "Linux"
-    },
-    {
-      "iconUrl": "../assets/images/git-real.png",
-      "className": null,
-      "name": "Git"
-    },
-    {
-      "iconUrl": "../assets/images/postgres.png",
-      "className": "wider",
-      "name": "PostgreSQL"
-    },
-    {
-      "iconUrl": "../assets/images/mongo.png",
-      "className": null,
-      "name": "MongoDB"
+      "name": "Hobbies",
+      "data": [
+        {
+          "iconUrl": "../assets/images/dorf.png",
+          "name": "Dwarf Fortress",
+          "description": "This game has eaten away more hours of my life than anything on the planet. I love building giant sandcastles and watching my dwarves crumble with them. STRIKE THE EARTH!"
+        },
+        {
+          "iconUrl": "../assets/images/bike.png",
+          "name": "Biking",
+          "description": "There's nothing better than hitting a bike trail in the height of summer."
+        },
+        {
+          "iconUrl": "../assets/images/hike.png",
+          "name": "Hiking",
+          "description": "I love the natural beauty around the PNW - getting out to see it is one of my favorite things to do."
+        },
+        {
+          "iconUrl": "../assets/images/paleo.png",
+          "name": "Paleontology",
+          "description": "I'm a huge natrual history nerd. My favorite era is the Cretaceous, and I can talk for hours about the Pleistocene mammals."
+        },
+        {
+          "iconUrl": "../assets/images/vidgame.png",
+          "name": "Gaming",
+          "description": "I've been a video game junky since I could crawl. From NES all the way to modern systems. My favorite leisure activity."
+        },
+        {
+          "iconUrl": "../assets/images/embarrass.png",
+          "name": "Embarrassing my Teenage Daughter",
+          "description": "This isn't just my hobby, it's my superpower. I am the best at it, and no one on earth can do it better."
+        }
+      ]
     }
   ]
 }

@@ -8,16 +8,36 @@ import Home from "./pages/Home";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./assets/theme/Theme";
 import ErrorBoundary from "./utils/ErrorBoundary";
+import { Container } from "@mui/material";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <React.StrictMode>
         <Router>
-          <ErrorBoundary>
-            <Navbar></Navbar>
-          </ErrorBoundary>
-          <main>
+          <Navbar></Navbar>
+          <Container
+            sx={{
+              backgroundColor: "secondary.light",
+              border: "solid",
+              borderColor: "secondary.light",
+              borderRadius: "1rem",
+              boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+              height: "35rem",
+              alignItems: "center",
+              border: "1px solid blue",
+              display: "flex",
+              flexGrow: "unset",
+              justifyContent: "center",
+              marginTop: "5rem",
+              marginBottom: "10rem",
+              width: {
+                xs: "95%",
+                md: "75%",
+                lg: "65&",
+              },
+            }}
+          >
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -29,9 +49,9 @@ function App() {
                 <Portfolio />
               </Route>
             </Switch>
-          </main>
+          </Container>
+          <Footer></Footer>
         </Router>
-        <Footer></Footer>
       </React.StrictMode>
     </ThemeProvider>
   );

@@ -10,6 +10,10 @@ const StepWidget = ({ activeStep, setActiveStep, eventArr }) => {
         borderColor: "primary.dark",
         borderBottom: "none",
         borderRadius: "5px",
+        display: {
+          xs: "none",
+          sm: "flex",
+        },
       }}
       position="static"
       activeStep={activeStep}
@@ -19,8 +23,16 @@ const StepWidget = ({ activeStep, setActiveStep, eventArr }) => {
           size="small"
           onClick={() => setActiveStep((prevActiveStep) => prevActiveStep + 1)}
           disabled={activeStep === eventArr.length - 1}
+          sx={{
+            display: {
+              xs: "none",
+              md: "flex",
+            },
+          }}
         >
-          Next
+          <Typography sx={{ display: { xs: "none", lg: "flex" } }}>
+            Next
+          </Typography>
           <KeyboardArrowRight />
         </IconButton>
       }
@@ -30,9 +42,17 @@ const StepWidget = ({ activeStep, setActiveStep, eventArr }) => {
           size="small"
           onClick={() => setActiveStep((prevActiveStep) => prevActiveStep - 1)}
           disabled={activeStep === 0}
+          sx={{
+            display: {
+              xs: "none",
+              md: "flex",
+            },
+          }}
         >
           <KeyboardArrowLeft />
-          Back
+          <Typography sx={{ display: { xs: "none", lg: "flex" } }}>
+            Back
+          </Typography>
         </IconButton>
       }
     />

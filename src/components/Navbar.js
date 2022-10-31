@@ -8,21 +8,15 @@ import {
   Menu,
   Container,
   MenuItem,
-  Popover,
 } from "@mui/material";
 
-import { Menu as MenuIcon, Adb } from "@mui/icons-material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-import profile from "../assets/images/placeholder.jpg";
+import NavIconBtn from "./NavIconBtn";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (event) => {
-    anchorEl ? setAnchorEl(null) : setAnchorEl(event.currentTarget);
-  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,13 +24,11 @@ const Navbar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <NavIconBtn display={{ xs: "none", md: "flex" }} />
           <Link
             to="/"
             style={{
@@ -45,13 +37,6 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Adb
-              sx={{
-                color: "text",
-                display: { xs: "none", md: "flex" },
-                mr: 1,
-              }}
-            />
             <Typography
               variant="h6"
               noWrap
@@ -132,9 +117,6 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Adb
-              sx={{ color: "text", display: { xs: "flex", md: "none" }, mr: 1 }}
-            />
             <Typography
               variant="h5"
               noWrap
@@ -142,7 +124,7 @@ const Navbar = () => {
               sx={{
                 mr: 2,
                 color: "text",
-                display: { xs: "flex", md: "none" },
+                display: { xs: "none", sm: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
                 fontWeight: 700,
@@ -152,7 +134,25 @@ const Navbar = () => {
             >
               Dustin Jackson
             </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              sx={{
+                mr: 2,
+                color: "text",
+                display: { xs: "flex", sm: "none" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".1rem",
+                textDecoration: "none",
+              }}
+            >
+              Dustin
+            </Typography>
           </Link>
+          <NavIconBtn display={{ xs: "flex", md: "none" }} />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <IconButton
               bgcolor="primary"
@@ -173,31 +173,6 @@ const Navbar = () => {
               </Link>
             </IconButton>
           </Box>
-          <IconButton onClick={handleClick}>
-            <Typography
-              sx={{
-                mr: 2,
-                color: "text",
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".1rem",
-              }}
-            >
-              ***Beauty***
-            </Typography>
-            <Popover
-              id={id}
-              open={open}
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-            >
-              <img alt="dustinjackson" sx={{ height: "2em" }} src={profile} />
-            </Popover>
-          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>

@@ -11,7 +11,9 @@ import React from "react";
 const Portfolio = () => {
   return (
     <Container>
-      <Typography variant="h5">Current Projects!</Typography>
+      <Typography variant="h5" color="text" sx={{ marginBottom: 1 }}>
+        Current Projects!
+      </Typography>
 
       <Accordion>
         <AccordionSummary>SpellCraft</AccordionSummary>

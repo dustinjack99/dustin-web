@@ -23,7 +23,6 @@ function App() {
               borderColor: "secondary.light",
               borderRadius: "1rem",
               boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.5)",
-              height: "35rem",
               alignItems: "center",
               border: "1px solid blue",
               display: "flex",
@@ -31,6 +30,8 @@ function App() {
               justifyContent: "center",
               marginTop: "5rem",
               marginBottom: "10rem",
+              paddingBottom: "2rem",
+              paddingTop: "2rem",
               width: {
                 xs: "95%",
                 md: "75%",

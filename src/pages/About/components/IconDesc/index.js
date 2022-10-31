@@ -36,6 +36,9 @@ const IconDesc = ({ tech, idx }) => {
           },
         }}
       >
+        <Typography variant="h5" sx={{ p: 2 }}>
+          {tech.name}
+        </Typography>
         <Typography sx={{ p: 2 }}>{tech.description}</Typography>
       </Popover>
     </>

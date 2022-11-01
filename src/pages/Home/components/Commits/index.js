@@ -20,7 +20,6 @@ const SlideShow = autoPlay(SwipeableViews);
 const fetchCommits = async (setEventArr) => {
   const res = await fetch(`https://api.github.com/users/dustinjack99/events`);
   const data = await res.json();
-  console.log(data);
   const commits = data.map((element) => {
     if (element.type === "PushEvent") {
       return {

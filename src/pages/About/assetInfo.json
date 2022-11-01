@@ -86,7 +86,7 @@
         {
           "iconUrl": "../assets/images/linux.png",
           "name": "Linux",
-          "description": "Using Ubuntu 20.04, I maintain a very robut homelab that I use to host a number of services, including my own personal databases that serve data to my apps."
+          "description": "Using Ubuntu 20.04, I maintain a very robust homelab that I use to host a number of services, including my own personal databases that serve data to my apps."
         },
         {
           "iconUrl": "../assets/images/git-real.png",
